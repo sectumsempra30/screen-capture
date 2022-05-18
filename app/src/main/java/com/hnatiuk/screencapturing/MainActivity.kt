@@ -1,6 +1,8 @@
 package com.hnatiuk.screencapturing
 
+import android.content.Context
 import android.content.Intent
+import android.media.projection.MediaProjectionManager
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -8,11 +10,21 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.hnatiuk.screencapturing.R.id.makeScreenshot
 import com.hnatiuk.screencapturing.R.id.screenshot
-import eu.bolt.screenshotty.*
+import com.hnatiuk.screencapturing.databinding.LayoutOverlayBinding
+import com.hnatiuk.screencapturing.overlay.OverlayManager
+import com.hnatiuk.screenshoter.GetMediaProjection
+import com.hnatiuk.screenshoter.MediaProjectionResultApiDelegate
+import com.hnatiuk.screenshoter.result.Screenshot
+import com.hnatiuk.screenshoter.result.ScreenshotResult
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var screenshotManager: ScreenshotManager
+//    private val getScreen = registerForActivityResult(GetMediaProjection(this)) {
+//        screenshotManager.onActivityResult(SCREENSHOT_REQUEST_CODE, it.resultCode, it.data)
+//    }
+//
+//    private lateinit var screenshotManager: ScreenshotManager
+    private lateinit var screenshotManager: MediaProjectionResultApiDelegate
     private var screenshotResultSubscription: ScreenshotResult.Subscription? = null
 
     private val overlayManager by lazy { OverlayManager(this) }
@@ -26,10 +38,11 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupScreenshotManager() {
-        screenshotManager = ScreenshotManagerBuilder(this)
-            .withCustomActionOrder(ScreenshotActionOrder.pixelCopyFirst())
-            .withPermissionRequestCode(SCREENSHOT_REQUEST_CODE)
-            .build()
+        screenshotManager =  MediaProjectionResultApiDelegate(this, 888)
+//        screenshotManager = ScreenshotManagerBuilder(this)
+//            .withCustomActionOrder(ScreenshotActionOrder.mediaProjectionFirst())
+//            .withPermissionRequestCode(SCREENSHOT_REQUEST_CODE)
+//            .build()
     }
 
     private fun initUI() {
@@ -38,29 +51,40 @@ class MainActivity : BaseActivity() {
         }
 
         makeScreenshot.asView<Button>().setOnClickListener {
-            screenshotResultSubscription = screenshotManager
-                .makeScreenshot()
-                .observe(
-                    onSuccess = { result ->
-                        if (result is ScreenshotBitmap) {
-                            screenshot.asView<ImageView>().setImageBitmap(result.bitmap)
-                        }
-                    },
-                    onError = {
-                        R.id.error.asView<TextView>().text = it.message
-                    }
-                )
+            makeScreenshot()
         }
     }
 
     private fun startOverlay() {
-        overlayManager.start(R.layout.layout_overlay)
+        val view = inflater.inflate(R.layout.layout_overlay, null)
+        LayoutOverlayBinding.bind(view).apply {
+            makeScreenshotOverlay.setOnClickListener {
+                makeScreenshot()
+            }
+        }
+
+        overlayManager.start(view)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        screenshotManager.onActivityResult(requestCode, resultCode, data)
+    private fun makeScreenshot() {
+        screenshotResultSubscription = screenshotManager
+            .makeScreenshot()
+            .observe(
+                onSuccess = { result ->
+                    if (result is Screenshot.ScreenshotBitmap) {
+                        screenshot.asView<ImageView>().setImageBitmap(result.bitmap)
+                    }
+                },
+                onError = {
+                    R.id.error.asView<TextView>().text = it.message
+                }
+            )
     }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        screenshotManager.onActivityResult(requestCode, resultCode, data)
+//    }
 
     companion object {
 
