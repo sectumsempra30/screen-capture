@@ -13,4 +13,6 @@ sealed class ScreenshotException : RuntimeException {
     object FailedToCreateMediaProjection : ScreenshotException("Failed to create MediaProjection object")
 
     object FailedToAcquireImage : ScreenshotException("ImageReader::acquireLatestImage returned null")
+
+    object NoMediaProjectionPermission : ScreenshotException("Request permission for media projection first")
 }

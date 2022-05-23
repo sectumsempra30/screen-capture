@@ -1,11 +1,17 @@
 package com.hnatiuk.core
 
+import android.app.Activity
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Context.*
 import android.media.projection.MediaProjectionManager
 import android.view.WindowManager
+import android.widget.Toast
 import java.lang.IllegalStateException
+
+fun Activity.toast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
 
 val Context.windowManager: WindowManager
     get() = getService(WINDOW_SERVICE)

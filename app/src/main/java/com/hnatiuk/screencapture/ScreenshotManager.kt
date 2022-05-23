@@ -38,11 +38,15 @@ class ScreenshotManager @Inject constructor() {
 
     @SuppressLint("NewApi")
     fun makeScreenshot(): Single<Screenshot> {
-        return if (isAtLeastAndroidQ()) {
-            provideScreenCapture()
+        return if (::contextReference.isInitialized && ::accessData.isInitialized) {
+            if (isAtLeastAndroidQ()) {
+                provideScreenCapture()
+            } else {
+                provideScreenCaptureWithoutService()
+            }.subscribeOn(AndroidSchedulers.mainThread())
         } else {
-            provideScreenCaptureWithoutService()
-        }.subscribeOn(AndroidSchedulers.mainThread())
+            Single.error(ScreenshotException.NoMediaProjectionPermission)
+        }
     }
 
     fun onDestroy() = with(context) {

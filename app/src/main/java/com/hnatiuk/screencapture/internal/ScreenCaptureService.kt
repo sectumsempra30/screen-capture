@@ -63,10 +63,9 @@ class ScreenCaptureService : Service() {
         screenCaptureSubscription = screenshotProvider.makeScreenshot()
             .observe(
                 { result ->
-                    Log.i("onScreenCaptured", "success $result")
+                    Log.i("onScreenCaptured", "success $result | listener $screenCaptureListener")
                     screenCaptureListener?.onScreenCapture(result)
                     stopForegroundService()
-
                 },
                 { error ->
                     Log.i("onScreenCaptured", "error $error")
