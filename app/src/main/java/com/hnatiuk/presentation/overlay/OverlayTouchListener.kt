@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapturing.overlay
+package com.hnatiuk.presentation.overlay
 
 import android.graphics.Point
 import android.graphics.PointF

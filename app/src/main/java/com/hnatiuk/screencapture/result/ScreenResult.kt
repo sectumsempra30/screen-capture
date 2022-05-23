@@ -1,10 +1,9 @@
-package com.hnatiuk.screenshoter.result
+package com.hnatiuk.screencapture.result
 
-import androidx.annotation.CheckResult
-import com.hnatiuk.screenshoter.ScreenshotSpec
-import com.hnatiuk.screenshoter.Utils
+import com.hnatiuk.screencapture.internal.Utils
+import com.hnatiuk.screencapture.internal.ScreenshotSpecs
 
-class ScreenResult(val spec: ScreenshotSpec? = null) : ScreenshotResult {
+class ScreenResult(val spec: ScreenshotSpecs? = null) : ScreenshotResult {
 
     private val subscriptions = ArrayList<SubscriptionImpl>()
 
@@ -31,18 +30,10 @@ class ScreenResult(val spec: ScreenshotSpec? = null) : ScreenshotResult {
         subscriptions.clear()
     }
 
-    @CheckResult
-    fun onErrorFallbackTo(resultProvider: () -> ScreenshotResult): ScreenResult {
-        val newResult = ScreenResult()
-        observe(newResult::onSuccess) { error ->
-            Utils.logE(error)
-            val next = resultProvider()
-            next.observe(newResult::onSuccess, newResult::onError)
-        }
-        return newResult
-    }
-
-    override fun observe(onSuccess: (Screenshot) -> Unit, onError: (Throwable) -> Unit): ScreenshotResult.Subscription {
+    override fun observe(
+        onSuccess: (Screenshot) -> Unit,
+        onError: (Throwable) -> Unit
+    ): ScreenshotResult.Subscription {
         Utils.checkOnMainThread()
         val screenshot = deliveredScreenshot
         val error = deliveredError
@@ -82,18 +73,9 @@ class ScreenResult(val spec: ScreenshotSpec? = null) : ScreenshotResult {
     }
 
     companion object {
-        fun success(screenshot: Screenshot) = ScreenResult().apply {
-            onSuccess(screenshot)
-        }
 
         fun error(e: Throwable) = ScreenResult().apply {
             onError(e)
-        }
-
-        fun from(another: ScreenshotResult): ScreenResult {
-            val result = ScreenResult()
-            another.observe(result::onSuccess, result::onError)
-            return result
         }
     }
 }

@@ -1,12 +1,12 @@
-package com.hnatiuk.screencapturing.overlay
+package com.hnatiuk.presentation.overlay
 
 import android.content.Context
 import android.content.Context.WINDOW_SERVICE
 import android.graphics.PixelFormat
-import android.os.Build
 import android.view.View
 import android.view.WindowManager
-import android.view.WindowManager.*
+import android.view.WindowManager.LayoutParams
+import com.hnatiuk.core.isAtLeastOreo
 
 class OverlayManager(private val context: Context) {
 
@@ -20,11 +20,12 @@ class OverlayManager(private val context: Context) {
         windowManager.addView(view, params)
     }
 
+    @Suppress("DEPRECATION")
     private fun getParams(): LayoutParams {
         return LayoutParams().apply {
             width = LayoutParams.WRAP_CONTENT
             height = LayoutParams.WRAP_CONTENT
-            type = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            type = if (isAtLeastOreo()) {
                 LayoutParams.TYPE_APPLICATION_OVERLAY
             } else {
                 LayoutParams.TYPE_PHONE

@@ -1,6 +1,5 @@
-package com.hnatiuk.screenshoter
+package com.hnatiuk.screencapture.internal
 
-import android.annotation.SuppressLint
 import android.hardware.display.VirtualDisplay
 import android.media.Image
 import android.media.ImageReader
@@ -13,9 +12,7 @@ import androidx.annotation.RequiresApi
 
 internal object Utils {
 
-    private const val LOG_TAG = "screenshot"
-
-    private const val LOG_ENABLED = false
+    private const val LOG_TAG = "ScreenCapture"
 
     fun checkOnMainThread() {
         if (Looper.getMainLooper() != Looper.myLooper()) {
@@ -52,20 +49,6 @@ internal object Utils {
     private inline fun doSafely(action: () -> Unit) = try {
         action()
     } catch (e: Exception) {
-        logE(e)
-    }
-
-    @SuppressLint("LogNotTimber")
-    fun logE(throwable: Throwable) {
-        if (LOG_ENABLED) {
-            Log.e(LOG_TAG, throwable.message, throwable)
-        }
-    }
-
-    @SuppressLint("LogNotTimber")
-    fun logE(message: String) {
-        if (LOG_ENABLED) {
-            Log.e(LOG_TAG, message)
-        }
+        Log.e(LOG_TAG, e.message, e)
     }
 }

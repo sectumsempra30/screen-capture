@@ -1,10 +1,11 @@
-package com.hnatiuk.screenshoter.result
+package com.hnatiuk.screencapture.result
 
 object Subscriptions {
 
     private val DISPOSED_INSTANCE = object : ScreenshotResult.Subscription {
+
         override fun dispose() {
-            //NOP
+            //no op
         }
     }
 

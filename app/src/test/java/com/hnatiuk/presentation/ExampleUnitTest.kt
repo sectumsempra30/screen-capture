@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapturing
+package com.hnatiuk.presentation
 
 import org.junit.Test
 

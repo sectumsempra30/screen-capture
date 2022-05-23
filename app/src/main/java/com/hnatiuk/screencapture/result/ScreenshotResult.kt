@@ -1,4 +1,4 @@
-package com.hnatiuk.screenshoter.result
+package com.hnatiuk.screencapture.result
 
 interface ScreenshotResult {
 
