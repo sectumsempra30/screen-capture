@@ -7,7 +7,12 @@ import android.content.Context.*
 import android.media.projection.MediaProjectionManager
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import java.lang.IllegalStateException
+
+fun Fragment.toast(message: String) {
+    Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+}
 
 fun Activity.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

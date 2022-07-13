@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScreenCapturing">
         <activity
+            android:name=".navigation.NavigationSampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".room.RoomSampleActivity"
             android:exported="false" />
         <activity

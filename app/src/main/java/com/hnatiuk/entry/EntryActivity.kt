@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.hnatiuk.features.R
 import com.hnatiuk.features.databinding.ActivityEntryBinding
+import com.hnatiuk.features.navigation.NavigationSampleActivity
 import com.hnatiuk.features.overlay.OverlayActivity
 import com.hnatiuk.features.room.RoomSampleActivity
 import com.hnatiuk.features.screencapture.ScreenCaptureActivity
@@ -30,6 +31,9 @@ class EntryActivity : AppCompatActivity() {
         }
         toRoomSample.setOnClickListener {
             startActivity(RoomSampleActivity.getIntent(this@EntryActivity))
+        }
+        toNavigationSample.setOnClickListener {
+            startActivity(NavigationSampleActivity.getIntent(this@EntryActivity))
         }
     }
 }

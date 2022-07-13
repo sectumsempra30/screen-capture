@@ -13,7 +13,7 @@ class ScreenCaptureRequest(
 
     private val contextReference = WeakReference(context)
 
-    override fun createIntent(context: Context, input: Unit?): Intent {
+    override fun createIntent(context: Context, input: Unit): Intent {
         return contextReference.get()
             ?.mediaProjectionManager
             ?.createScreenCaptureIntent()
