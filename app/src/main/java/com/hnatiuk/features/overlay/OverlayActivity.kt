@@ -8,10 +8,12 @@ import com.hnatiuk.features.R
 import com.hnatiuk.features.databinding.ActivityOverlayBinding
 import com.hnatiuk.features.databinding.LayoutOverlayBinding
 import com.hnatiuk.core.SimpleIntentProvider
+import com.hnatiuk.features.overlay.lib.OverlayManager
 
 class OverlayActivity : AppCompatActivity() {
 
     private val binding by viewBinding(ActivityOverlayBinding::bind, R.id.container)
+    private val overlayManager by lazy { OverlayManager(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,11 +28,15 @@ class OverlayActivity : AppCompatActivity() {
     }
 
     private fun startOverlay() {
-        LayoutOverlayBinding.inflate(layoutInflater).apply {
-            makeScreenshotOverlay.setOnClickListener {
+        val view = LayoutOverlayBinding.inflate(layoutInflater).apply {
+            click.setOnClickListener {
                 toast("Toast from overlay")
             }
-        }
+            stop.setOnClickListener {
+                overlayManager.stop(this.root)
+            }
+        }.root
+        overlayManager.start(view)
     }
 
     companion object : SimpleIntentProvider(OverlayActivity::class.java)

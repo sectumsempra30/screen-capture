@@ -20,6 +20,10 @@ class OverlayManager(private val context: Context) {
         windowManager.addView(view, params)
     }
 
+    fun stop(view: View) {
+        windowManager.removeView(view)
+    }
+
     @Suppress("DEPRECATION")
     private fun getParams(): LayoutParams {
         return LayoutParams().apply {
