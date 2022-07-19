@@ -10,7 +10,7 @@ android {
     compileSdk rootProject.ext.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId "com.hnatiuk.screencapturing"
+        applicationId "com.hnatiuk.androidsamples"
         minSdk rootProject.ext.minSdkVersion
         targetSdk rootProject.ext.targetSdkVersion
         versionCode 1
@@ -57,6 +57,7 @@ dependencies {
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout
+    implementation appDependencies.material
 
     implementation appDependencies.hiltAndroid
     kapt appDependencies.hiltCompiler

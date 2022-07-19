@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ScreenCapturing">
+        android:theme="@style/Theme.AndroidSamples">
         <activity
             android:name="com.hnatiuk.navigation.complexsample.entry.EntryNavigationActivity"
             android:exported="false" />
