@@ -12,7 +12,7 @@ dependencyResolutionManagement {
     mavenCentral()
   }
 }
-rootProject.name = "Screen Capturing"
+rootProject.name = "Android Samples"
 include ':app'
 include ':navigation'
 include ':core'
