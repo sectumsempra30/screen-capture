@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultDashboardItemStyle">
+        <item name="android:layout_width">@dimen/dashboard_item_width</item>
+        <item name="android:layout_height">@dimen/dashboard_item_height</item>
+    </style>
+
+</resources>

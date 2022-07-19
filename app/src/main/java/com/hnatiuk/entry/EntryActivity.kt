@@ -1,37 +1,29 @@
 package com.hnatiuk.entry
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import by.kirich1409.viewbindingdelegate.viewBinding
-import com.hnatiuk.features.R
+import android.view.LayoutInflater
+import androidx.core.view.isVisible
+import com.hnatiuk.core.base.BaseActivity
 import com.hnatiuk.features.databinding.ActivityEntryBinding
-import com.hnatiuk.features.navigation.NavigationSampleActivity
-import com.hnatiuk.features.overlay.OverlayActivity
-import com.hnatiuk.features.room.RoomSampleActivity
-import com.hnatiuk.features.screencapture.ScreenCaptureActivity
-import dagger.hilt.android.AndroidEntryPoint
+import com.hnatiuk.navigation.NavigationSampleActivity
+import com.hnatiuk.overlay.OverlayActivity
+import com.hnatiuk.screencapture.ScreenCaptureActivity
 
-@AndroidEntryPoint
-class EntryActivity : AppCompatActivity() {
+class EntryActivity : BaseActivity<ActivityEntryBinding>() {
 
-    private val binding by viewBinding(ActivityEntryBinding::bind, R.id.container)
+    override val bindingFactory: (LayoutInflater) -> ActivityEntryBinding =
+        ActivityEntryBinding::inflate
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_entry)
-        initUI()
-    }
-
-    private fun initUI() = with(binding) {
+    override fun ActivityEntryBinding.initUI() {
         toScreenCapture.setOnClickListener {
             startActivity(ScreenCaptureActivity.getIntent(this@EntryActivity))
         }
         toOverlay.setOnClickListener {
             startActivity(OverlayActivity.getIntent(this@EntryActivity))
         }
-        toRoomSample.setOnClickListener {
-            startActivity(RoomSampleActivity.getIntent(this@EntryActivity))
-        }
+        toRoomSample.isVisible = false
+//        toRoomSample.setOnClickListener {
+//            startActivity(RoomSampleActivity.getIntent(this@EntryActivity))
+//        }
         toNavigationSample.setOnClickListener {
             startActivity(NavigationSampleActivity.getIntent(this@EntryActivity))
         }

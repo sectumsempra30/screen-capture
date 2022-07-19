@@ -8,14 +8,30 @@
         <entry key="..\:/Users/Maksym_Hnatiuk/Desktop/Projects/ScreenCapturing/app/src/main/res/layout/layout_overlay.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_entry.xml" value="0.20153985507246377" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/activity_navigation_entry.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/activity_navigation_sample.xml" value="0.487962962962963" />
+        <entry key="app/src/main/res/layout/activity_navigation_splash.xml" value="0.22037037037037038" />
         <entry key="app/src/main/res/layout/activity_overlay.xml" value="0.2786458333333333" />
         <entry key="app/src/main/res/layout/activity_room_sample.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/activity_screen_capture.xml" value="0.23072916666666668" />
+        <entry key="app/src/main/res/layout/activity_simple_navigation_sample.xml" value="0.5203703703703704" />
+        <entry key="app/src/main/res/layout/activity_spash.xml" value="0.5203703703703704" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5203703703703704" />
         <entry key="app/src/main/res/layout/fragment_box.xml" value="0.487962962962963" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/fragment_entry_tab.xml" value="0.34427083333333336" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/fragment_root.xml" value="0.487962962962963" />
         <entry key="app/src/main/res/layout/fragment_secret.xml" value="0.487962962962963" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.32395833333333335" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/fragment_splash_navigation.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/layout_overlay.xml" value="0.46564102564102566" />
+        <entry key="app/src/main/res/layout/view_dashboard_item.xml" value="0.34322916666666664" />
+        <entry key="navigation/src/main/res/layout/fragment_secret.xml" value="0.5244791666666667" />
+        <entry key="overlay/src/main/res/layout/activity_overlay.xml" value="0.5244791666666667" />
+        <entry key="overlay/src/main/res/layout/layout_overlay.xml" value="0.5244791666666667" />
+        <entry key="screencapture/src/main/res/layout/activity_screen_capture.xml" value="0.5244791666666667" />
       </map>
     </option>
   </component>

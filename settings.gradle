@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Screen Capturing"
 include ':app'
+include ':navigation'
+include ':core'
+include ':overlay'
+include ':screencapture'
