@@ -1,6 +1,5 @@
 package com.hnatiuk.screencapture
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import com.hnatiuk.core.base.BaseActivity
 import com.hnatiuk.core.utils.SimpleIntentProvider
@@ -23,13 +22,7 @@ class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
-        initUI()
-    }
-
-    private fun initUI() = with(binding) {
+    override fun ActivityScreenCaptureBinding.initUI() {
         requestPermission.setOnClickListener {
             requestScreenshotPermission.launch(Unit)
         }
@@ -42,12 +35,8 @@ class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
     private fun makeScreenshot() {
         screenshotManager.makeScreenshot()
             .subscribe(
-                { result ->
-                    binding.screenshot.setImageBitmap(result.bitmap)
-                },
-                { error ->
-                    binding.error.text = error.message
-                }
+                { result -> binding.screenshot.setImageBitmap(result.bitmap) },
+                { error -> binding.error.text = error.message }
             )
     }
 

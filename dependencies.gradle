@@ -1,0 +1,51 @@
+def versions = [:]
+
+//UI
+versions.appCompat = '1.4.2'
+versions.material = '1.6.1'
+versions.coreKtx = '1.8.0'
+versions.constraintLayout = '2.1.4'
+
+//RxJava
+versions.rxJava = '3.1.5'
+versions.rxJavaAndroid = '3.0.0'
+
+//DI
+versions.dagger = '2.42'
+
+//Json
+versions.gson = '2.9.0'
+
+def libs = [:]
+
+//UI
+libs.appCompat = 'androidx.appcompat:appcompat'
+libs.material = 'com.google.android.material:material'
+libs.coreKtx = 'androidx.core:core-ktx'
+libs.constraintLayout = 'androidx.constraintlayout:constraintlayout'
+
+//RxJava
+libs.rxJava = 'io.reactivex.rxjava3:rxjava'
+libs.rxJavaAndroid = 'io.reactivex.rxjava3:rxandroid'
+
+//DI
+libs.hiltAndroid = 'com.google.dagger:hilt-android'
+libs.hiltCompiler = 'com.google.dagger:hilt-compiler'
+
+//Gson
+libs.gson = 'com.google.code.gson:gson'
+
+ext.appDependencies = [
+        appCompat       : "${libs.appCompat}:${versions.appCompat}",
+        material        : "${libs.material}:${versions.material}",
+        coreKtx         : "${libs.coreKtx}:${versions.coreKtx}",
+        constraintLayout: "${libs.constraintLayout}:${versions.constraintLayout}",
+
+        rxJava          : "${libs.rxJava}:${versions.rxJava}",
+        rxJavaAndroid   : "${libs.rxJavaAndroid}:${versions.rxJavaAndroid}",
+
+        hiltAndroid     : "${libs.hiltAndroid}:${versions.dagger}",
+        hiltCompiler    : "${libs.hiltCompiler}:${versions.dagger}",
+
+        gson            : "${libs.gson}:${versions.gson}",
+]

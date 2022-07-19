@@ -1,6 +1,5 @@
 package com.hnatiuk.overlay
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import com.hnatiuk.core.base.BaseActivity
 import com.hnatiuk.core.extensions.toast
@@ -11,18 +10,12 @@ import com.hnatiuk.overlay.lib.OverlayManager
 
 class OverlayActivity : BaseActivity<ActivityOverlayBinding>() {
 
+    private val overlayManager by lazy { OverlayManager(this) }
+
     override val bindingFactory: (LayoutInflater) -> ActivityOverlayBinding
         get() = ActivityOverlayBinding::inflate
 
-    private val overlayManager by lazy { OverlayManager(this) }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_overlay)
-        initUI()
-    }
-
-    private fun initUI() = with(binding) {
+    override fun ActivityOverlayBinding.initUI() {
         startOverlay.setOnClickListener {
             startOverlay()
         }

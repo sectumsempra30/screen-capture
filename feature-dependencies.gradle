@@ -1,0 +1,28 @@
+def versions = [:]
+
+//Screen Capture
+versions.screenshotty = '1.0.4'
+
+//Navigation
+versions.navigation = '2.5.0'
+versions.fragmentKtx = '1.5.0'
+
+def libs = [:]
+
+//Screen Capture
+libs.screenshotty = 'eu.bolt:screenshotty'
+libs.screenshottyRx = 'eu.bolt:screenshotty-rx'
+
+//Navigation
+libs.navigationFragmentKtx = 'androidx.navigation:navigation-fragment-ktx'
+libs.navigationUiKtx = 'androidx.navigation:navigation-ui-ktx'
+libs.fragmentKtx = 'androidx.fragment:fragment-ktx'
+
+ext.featureDependencies = [
+        screenshotty         : "${libs.screenshotty}:${versions.screenshotty}",
+        screenshottyRx       : "${libs.screenshottyRx}:${versions.screenshotty}",
+
+        navigationFragmentKtx: "${libs.navigationFragmentKtx}:${versions.navigation}",
+        navigationUiKtx      : "${libs.navigationUiKtx}:${versions.navigation}",
+        fragmentKtx          : "${libs.fragmentKtx}:${versions.fragmentKtx}",
+]

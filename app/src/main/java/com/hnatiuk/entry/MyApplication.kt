@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample
+package com.hnatiuk.entry
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
