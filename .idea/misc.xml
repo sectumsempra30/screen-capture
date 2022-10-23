@@ -28,9 +28,21 @@
         <entry key="app/src/main/res/layout/fragment_splash_navigation.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/layout_overlay.xml" value="0.46564102564102566" />
         <entry key="app/src/main/res/layout/view_dashboard_item.xml" value="0.34322916666666664" />
+        <entry key="motionlayout/src/main/res/layout/activity_motion_layout.xml" value="0.428125" />
+        <entry key="motionlayout/src/main/res/xml/scene_activiy_motion_layout.xml" value="0.28854166666666664" />
+        <entry key="navigation/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
+        <entry key="navigation/src/main/res/drawable/ic_dashboard.xml" value="0.1" />
+        <entry key="navigation/src/main/res/drawable/ic_settings.xml" value="0.1" />
+        <entry key="navigation/src/main/res/layout/activity_navigation_entry.xml" value="0.3609375" />
+        <entry key="navigation/src/main/res/layout/fragment_dashboard.xml" value="0.30648148148148147" />
+        <entry key="navigation/src/main/res/layout/fragment_entry_tab.xml" value="0.3609375" />
+        <entry key="navigation/src/main/res/layout/fragment_profile.xml" value="0.15971476236979165" />
         <entry key="navigation/src/main/res/layout/fragment_secret.xml" value="0.5244791666666667" />
+        <entry key="navigation/src/main/res/layout/fragment_tabs.xml" value="0.125" />
+        <entry key="navigation/src/main/res/menu/tabs_menu.xml" value="0.2953703703703704" />
         <entry key="overlay/src/main/res/layout/activity_overlay.xml" value="0.5244791666666667" />
         <entry key="overlay/src/main/res/layout/layout_overlay.xml" value="0.5244791666666667" />
+        <entry key="room/src/main/res/layout/activity_room_sample.xml" value="0.55" />
         <entry key="screencapture/src/main/res/layout/activity_screen_capture.xml" value="0.5244791666666667" />
       </map>
     </option>

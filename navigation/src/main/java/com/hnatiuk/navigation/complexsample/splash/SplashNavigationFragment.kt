@@ -5,8 +5,8 @@ import android.os.Looper
 import androidx.core.os.postDelayed
 import com.hnatiuk.core.base.BaseFragment
 import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.complexsample.entry.EntryNavigationArg
-import com.hnatiuk.navigation.complexsample.graphs.SplashRoute
+import com.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
+import com.hnatiuk.navigation.complexsample.graphs.SplashDestination
 import com.hnatiuk.navigation.databinding.FragmentSplashNavigationBinding
 import com.hnatiuk.navigation.lib.buildRoute
 import com.hnatiuk.navigation.lib.navController
@@ -23,7 +23,8 @@ class SplashNavigationFragment : BaseFragment<FragmentSplashNavigationBinding>()
     }
 
     private fun navigationToEntryActivity() {
-        navController.navigate(buildRoute(SplashRoute.ENTRY, EntryNavigationArg(isSignIn = false)))
+        val arg = MainNavigationActivityArg(isSignIn = true)
+        navController.navigate(buildRoute(SplashDestination.MAIN, arg))
         requireActivity().finish()
     }
 }

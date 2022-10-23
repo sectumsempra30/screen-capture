@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidSamples">
         <activity
-            android:name="com.hnatiuk.navigation.complexsample.entry.EntryNavigationActivity"
+            android:name="com.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivity"
             android:exported="false" />
         <activity
             android:name="com.hnatiuk.navigation.complexsample.splash.SplashNavigationActivity"

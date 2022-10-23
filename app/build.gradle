@@ -54,6 +54,8 @@ dependencies {
     implementation project(":navigation")
     implementation project(":overlay")
     implementation project(":screencapture")
+    implementation project(":motionlayout")
+    implementation project(":room")
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout

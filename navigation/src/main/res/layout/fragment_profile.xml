@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/medium_margin">
 
-        <TextView
+        <EditText
             android:id="@+id/screenTitleTextView"
             style="@style/TitleTextView"
             android:text="@string/profile_title_hint"
