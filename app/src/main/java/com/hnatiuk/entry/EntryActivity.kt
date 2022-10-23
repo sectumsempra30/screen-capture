@@ -1,13 +1,13 @@
 package com.hnatiuk.entry
 
 import android.view.LayoutInflater
-import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.core.view.isVisible
 import com.hnatiuk.core.base.BaseActivity
+import com.hnatiuk.core.utils.SimpleIntentProvider
 import com.hnatiuk.features.databinding.ActivityEntryBinding
 import com.hnatiuk.navigation.NavigationSampleActivity
 import com.hnatiuk.overlay.OverlayActivity
 import com.hnatiuk.screencapture.ScreenCaptureActivity
+import dev.hnatiuk.compose.ComposeActivity
 import dev.hnatiuk.motionlayout.MotionLayoutActivity
 import dev.hnatiuk.room.RoomSampleActivity
 
@@ -32,5 +32,14 @@ class EntryActivity : BaseActivity<ActivityEntryBinding>() {
         toMotionLayoutSample.setOnClickListener {
             startActivity(MotionLayoutActivity.getIntent(this@EntryActivity))
         }
+        toComposeSample.setOnClickListener {
+            startActivity(ComposeActivity.getIntent(this@EntryActivity))
+        }
+
+        performSetup(activity = ComposeActivity)
+    }
+
+    private fun performSetup(activity: SimpleIntentProvider) {
+        startActivity(activity.getIntent(this@EntryActivity))
     }
 }

@@ -29,6 +29,9 @@
             android:name="com.hnatiuk.overlay.OverlayActivity"
             android:exported="false" />
         <activity
+            android:name="dev.hnatiuk.compose.ComposeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.hnatiuk.entry.EntryActivity"
             android:exported="true">
             <intent-filter>
