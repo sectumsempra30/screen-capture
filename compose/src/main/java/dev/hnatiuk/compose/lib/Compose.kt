@@ -20,8 +20,17 @@ fun HelloCompose(
     title: String = "Hello, Compose!",
     content: String = "Text from Jetpack compose"
 ) {
-    Text(title)
-    Text(content)
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .wrapContentHeight()
+            .wrapContentWidth()
+            .background(Color.White)
+    ) {
+        Text(title)
+        Text(content)
+    }
 }
 
 @Preview
