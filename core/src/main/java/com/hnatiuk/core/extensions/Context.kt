@@ -4,6 +4,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.media.projection.MediaProjectionManager
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import java.lang.IllegalStateException
 
 val Context.windowManager: WindowManager
@@ -14,6 +15,9 @@ val Context.notificationManager: NotificationManager
 
 val Context.mediaProjectionManager: MediaProjectionManager
     get() = getService(Context.MEDIA_PROJECTION_SERVICE)
+
+val Context.inputMethodManager: InputMethodManager
+    get() = getService(Context.INPUT_METHOD_SERVICE)
 
 @Suppress("UNCHECKED_CAST")
 private fun <Type> Context.getService(name: String): Type {
