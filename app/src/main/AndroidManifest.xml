@@ -41,11 +41,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hnatiuk.features.com.hnatiuk.screencapture.ScreenCaptureActivity"
+            android:name="com.hnatiuk.screencapture.ScreenCaptureActivity"
             android:exported="true" />
 
         <service
-            android:name="com.hnatiuk.features.com.hnatiuk.screencapture.lib.internal.ScreenCaptureService"
+            android:name="com.hnatiuk.screencapture.lib.internal.ScreenCaptureService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection" />
