@@ -2,4 +2,9 @@ package com.hnatiuk.screencapture.lib.result
 
 import android.graphics.Bitmap
 
-class Screenshot(val bitmap: Bitmap)
+open class Screenshot(val bitmap: Bitmap)
+
+class ScreenshotId(
+    bitmap: Bitmap,
+    val id: String?
+) : Screenshot(bitmap)

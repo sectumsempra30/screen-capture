@@ -1,99 +1,85 @@
 package com.hnatiuk.screencapture.lib
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import android.os.Build
-import androidx.annotation.RequiresApi
+import com.hnatiuk.core.utils.SimpleServiceConnection
 import com.hnatiuk.core.utils.isAtLeastAndroidQ
 import com.hnatiuk.core.utils.isAtLeastOreo
 import com.hnatiuk.screencapture.lib.internal.ScreenCaptureService
-import com.hnatiuk.screencapture.lib.internal.provider.MediaProjectionScreenshotProvider
+import com.hnatiuk.screencapture.lib.internal.ScreenCaptureService.*
 import com.hnatiuk.screencapture.lib.result.Screenshot
+import com.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
 import java.lang.ref.WeakReference
 
-class ScreenshotManager {
+class ScreenshotManager constructor(
+    private val context: Context
+) {
 
-    private lateinit var contextReference: WeakReference<Context>
-    private lateinit var accessData: ScreenCaptureAccessData
+    private var accessData: ScreenCaptureAccessData? = null
 
     private val provider by lazy {
-        MediaProjectionScreenshotProvider(context, accessData)
+        val accessData = accessData ?: throw ScreenshotException.NoMediaProjectionPermission
+        MediaProjectionScreenshotProviderV2(context).apply {
+            init(accessData)
+        }
     }
 
-    private val context: Context
-        get() = contextReference.get() ?: throw ScreenshotException.NoContextReference
-
     private var screenshotServiceConnection: ServiceConnection? = null
+    private var serviceBinder: WeakReference<ScreenCaptureService.ScreenCaptureBinder>? = null
 
-    fun init(context: Context, accessData: ScreenCaptureAccessData) {
-        contextReference = WeakReference(context)
+    fun onPermissionGranted(accessData: ScreenCaptureAccessData) {
         this.accessData = accessData
     }
 
-    @SuppressLint("NewApi")
-    fun makeScreenshot(): Single<Screenshot> {
-        return if (isInitialized()) {
-            if (isAtLeastAndroidQ()) {
-                provideScreenCapture()
-            } else {
-                provideScreenCaptureWithoutService()
-            }.subscribeOn(AndroidSchedulers.mainThread())
-        } else {
-            Single.error(ScreenshotException.NoMediaProjectionPermission)
+    fun isPermissionGranted(): Boolean {
+        return accessData != null
+    }
+
+    fun makeScreenshot(forId: String?): Single<Screenshot> = when {
+        isPermissionGranted() && isAtLeastAndroidQ() -> provideScreenshotWithService(forId)
+        isPermissionGranted() -> provideScreenshotWithoutService(forId)
+        else -> Single.error(ScreenshotException.NoMediaProjectionPermission)
+    }.subscribeOn(AndroidSchedulers.mainThread())
+
+    fun onDestroy() = with(context) {
+        screenshotServiceConnection?.let { connection ->
+            unbindService(connection)
+            toggleServiceWithIntent(ScreenCaptureService.stopIntent(this))
         }
     }
 
-    fun onDestroy() {
-        if (isInitialized()) {
-            screenshotServiceConnection?.let { connection ->
-                context.unbindService(connection)
-                toggleServiceWithIntent(ScreenCaptureService.stopIntent(context))
-            }
-        }
+    private fun provideScreenshotWithoutService(forId: String?): Single<Screenshot> {
+        return provider.makeScreenshot(forId)
     }
 
-    private fun provideScreenCaptureWithoutService(): Single<Screenshot> {
-        return Single.create { emitter ->
-            val result = provider.makeScreenshot()
-            result.observe(emitter::onSuccess, emitter::onError)
-        }.subscribeOn(AndroidSchedulers.mainThread())
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    private fun provideScreenCapture(): Single<Screenshot> {
-        return Single.create { emitter ->
-            val screenshotServiceConnection = object :
-                com.hnatiuk.core.utils.SimpleServiceConnection<ScreenCaptureService.ScreenCaptureBinder>() {
-                override fun onServiceConnected(service: ScreenCaptureService.ScreenCaptureBinder) {
-                    service.setOnScreenCaptureListener(object :
-                        ScreenCaptureService.OnScreenCaptureListener {
-                        override fun onScreenCapture(screenshot: Screenshot) {
-                            emitter.onSuccess(screenshot)
-                        }
-
-                        override fun onError(error: Throwable) {
-                            emitter.onError(error)
-                        }
-                    })
+    private fun provideScreenshotWithService(forId: String?): Single<Screenshot> {
+        return when (val service = serviceBinder?.get()) {
+            null -> Single.create {
+                val screenshotServiceConnection = object : SimpleServiceConnection<ScreenCaptureBinder>() {
+                    override fun onServiceConnected(service: ScreenCaptureBinder) {
+                        serviceBinder = WeakReference(service)
+                        it.onSuccess(service)
+                    }
                 }
+                this.screenshotServiceConnection = screenshotServiceConnection
+                startScreenCaptureService(screenshotServiceConnection)
             }
-            this.screenshotServiceConnection = screenshotServiceConnection
-
-            with(context) {
-                val intent = ScreenCaptureService.newIntent(this, accessData)
-                toggleServiceWithIntent(intent)
-                bindService(
-                    Intent(this, ScreenCaptureService::class.java),
-                    screenshotServiceConnection,
-                    Context.BIND_AUTO_CREATE
-                )
-            }
+            else -> Single.just(service)
+        }.flatMap {
+            it.makeScreenshot(forId)
         }
     }
+
+    private fun startScreenCaptureService(connection: SimpleServiceConnection<ScreenCaptureService.ScreenCaptureBinder>) =
+        with(context) {
+            val accessData = accessData ?: throw ScreenshotException.NoMediaProjectionPermission
+            val intent = ScreenCaptureService.newIntent(this, accessData)
+            toggleServiceWithIntent(intent)
+            bindService(Intent(this, ScreenCaptureService::class.java), connection, Context.BIND_AUTO_CREATE)
+        }
 
     private fun toggleServiceWithIntent(intent: Intent) = with(context) {
         if (isAtLeastOreo()) {
@@ -101,9 +87,5 @@ class ScreenshotManager {
         } else {
             startService(intent)
         }
-    }
-
-    private fun isInitialized(): Boolean {
-        return ::contextReference.isInitialized && ::accessData.isInitialized
     }
 }

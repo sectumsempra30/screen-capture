@@ -15,4 +15,6 @@ sealed class ScreenshotException : RuntimeException {
     object FailedToAcquireImage : ScreenshotException("ImageReader::acquireLatestImage returned null")
 
     object NoMediaProjectionPermission : ScreenshotException("Request permission for media projection first")
+
+    object CaptureAlreadyStartedException : ScreenshotException("Capture thread is already started")
 }

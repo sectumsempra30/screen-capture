@@ -7,10 +7,11 @@ import com.hnatiuk.screencapture.databinding.ActivityScreenCaptureBinding
 import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
 import com.hnatiuk.screencapture.lib.ScreenCaptureRequest
 import com.hnatiuk.screencapture.lib.ScreenshotManager
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 
 class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
 
-    private val screenshotManager by lazy { ScreenshotManager() }
+    private val screenshotManager by lazy { ScreenshotManager(this) }
 
     override val bindingFactory: (LayoutInflater) -> ActivityScreenCaptureBinding
         get() = ActivityScreenCaptureBinding::inflate
@@ -18,7 +19,7 @@ class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
     private val requestScreenshotPermission = registerForActivityResult(ScreenCaptureRequest(this)) {
         val data = it.data
         if (it.resultCode == RESULT_OK && data != null) {
-            screenshotManager.init(this, ScreenCaptureAccessData(it.resultCode, data))
+            screenshotManager.onPermissionGranted(ScreenCaptureAccessData(it.resultCode, data))
         }
     }
 
@@ -33,7 +34,8 @@ class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
     }
 
     private fun makeScreenshot() {
-        screenshotManager.makeScreenshot()
+        screenshotManager.makeScreenshot("some-id")
+            .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { result -> binding.screenshot.setImageBitmap(result.bitmap) },
                 { error -> binding.error.text = error.message }

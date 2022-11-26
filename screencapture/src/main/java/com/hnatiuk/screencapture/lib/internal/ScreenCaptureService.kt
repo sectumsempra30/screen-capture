@@ -10,24 +10,21 @@ import android.graphics.Color
 import android.os.Binder
 import android.os.Build
 import android.os.IBinder
-import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.PRIORITY_MIN
 import com.hnatiuk.core.BuildConfig
 import com.hnatiuk.core.extensions.notificationManager
+import com.hnatiuk.core.extensions.parcelable
 import com.hnatiuk.core.utils.isAtLeastOreo
 import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
-import com.hnatiuk.screencapture.lib.internal.provider.MediaProjectionScreenshotProvider
-import com.hnatiuk.screencapture.lib.result.Screenshot
 import com.hnatiuk.screencapture.lib.result.ScreenshotResult
+import com.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
 
 class ScreenCaptureService : Service() {
 
-    private var screenCaptureListener: OnScreenCaptureListener? = null
-
     private var screenCaptureSubscription: ScreenshotResult.Subscription? = null
-    private lateinit var screenshotProvider: MediaProjectionScreenshotProvider
+    private lateinit var screenshotProvider: MediaProjectionScreenshotProviderV2
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when {
@@ -35,7 +32,6 @@ class ScreenCaptureService : Service() {
             isAtLeastOreo() -> {
                 startForeground(SERVICE_ID, createForegroundNotification())
                 initScreenshotProvider(intent)
-                startScreenCapture()
             }
         }
 
@@ -52,30 +48,19 @@ class ScreenCaptureService : Service() {
     }
 
     private fun initScreenshotProvider(intent: Intent) {
-        val accessData = intent.getParcelableExtra<ScreenCaptureAccessData>(ACCESS_DATA_EXTRA_KEY)
+        val accessData = intent.parcelable<ScreenCaptureAccessData>(ACCESS_DATA_EXTRA_KEY)
             ?: throw IllegalArgumentException("ProjectionAccessData cannot be null")
 
-        screenshotProvider = MediaProjectionScreenshotProvider(applicationContext, accessData)
-    }
-
-    private fun startScreenCapture() {
-        screenCaptureSubscription = screenshotProvider.makeScreenshot()
-            .observe(
-                { result ->
-                    Log.i("onScreenCaptured", "success $result | listener $screenCaptureListener")
-                    screenCaptureListener?.onScreenCapture(result)
-                    stopForegroundService()
-                },
-                { error ->
-                    Log.i("onScreenCaptured", "error $error")
-                    screenCaptureListener?.onError(error)
-                }
-            )
+        screenshotProvider = MediaProjectionScreenshotProviderV2(this).apply {
+            init(accessData)
+        }
     }
 
     private fun stopForegroundService() {
         stopSelf()
-        stopForeground(true)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            stopForeground(STOP_FOREGROUND_DETACH)
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -121,22 +106,14 @@ class ScreenCaptureService : Service() {
             action = ACTION_STOP
         }
 
-        fun newIntent(context: Context, accessData: ScreenCaptureAccessData) = Intent(context, ScreenCaptureService::class.java).apply {
-            putExtra(ACCESS_DATA_EXTRA_KEY, accessData)
-        }
-    }
-
-    interface OnScreenCaptureListener {
-
-        fun onScreenCapture(screenshot: Screenshot)
-
-        fun onError(error: Throwable)
+        fun newIntent(context: Context, accessData: ScreenCaptureAccessData) =
+            Intent(context, ScreenCaptureService::class.java).apply {
+                putExtra(ACCESS_DATA_EXTRA_KEY, accessData)
+            }
     }
 
     inner class ScreenCaptureBinder : Binder() {
 
-        fun setOnScreenCaptureListener(listener: OnScreenCaptureListener) {
-            this@ScreenCaptureService.screenCaptureListener = listener
-        }
+        fun makeScreenshot(forId: String?) = screenshotProvider.makeScreenshot(forId)
     }
 }
