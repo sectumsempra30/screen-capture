@@ -4,6 +4,9 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
+    //Firebase
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -57,6 +60,7 @@ dependencies {
     implementation project(":motionlayout")
     implementation project(":room")
     implementation project(":compose")
+    implementation project(":firebase")
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout
@@ -64,4 +68,10 @@ dependencies {
 
     implementation appDependencies.hiltAndroid
     kapt appDependencies.hiltCompiler
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
 }

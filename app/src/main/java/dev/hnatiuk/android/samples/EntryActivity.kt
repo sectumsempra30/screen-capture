@@ -8,6 +8,7 @@ import dev.hnatiuk.android.samples.navigation.NavigationSampleActivity
 import dev.hnatiuk.android.samples.overlay.OverlayActivity
 import dev.hnatiuk.android.samples.screencapture.ScreenCaptureActivity
 import dev.hnatiuk.android.samples.compose.ComposeActivity
+import dev.hnatiuk.android.samples.firebase.FirebaseSampleActivity
 import dev.hnatiuk.android.samples.motionlayout.MotionLayoutActivity
 import dev.hnatiuk.android.samples.room.RoomSampleActivity
 
@@ -36,7 +37,7 @@ class EntryActivity : BaseActivity<ActivityEntryBinding>() {
             startActivity(ComposeActivity.getIntent(this@EntryActivity))
         }
 
-        performSetup(activity = ComposeActivity)
+        performSetup(activity = FirebaseSampleActivity)
     }
 
     private fun performSetup(activity: SimpleIntentProvider) {
