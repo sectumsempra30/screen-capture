@@ -1,4 +1,4 @@
-package dev.hnatiuk.room
+package dev.hnatiuk.android.samples.room
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("dev.hnatiuk.room.test", appContext.packageName)
+        assertEquals("dev.hnatiuk.android.samples.room.test", appContext.packageName)
     }
 }

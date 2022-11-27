@@ -1,4 +1,4 @@
-package dev.hnatiuk.room
+package dev.hnatiuk.android.samples.room
 
 import org.junit.Test
 

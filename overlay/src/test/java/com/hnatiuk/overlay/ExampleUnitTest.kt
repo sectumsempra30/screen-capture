@@ -1,4 +1,4 @@
-package dev.hnatiuk.overlay
+package dev.hnatiuk.android.samples.overlay
 
 import org.junit.Test
 

@@ -14,19 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidSamples">
         <activity
-            android:name="dev.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivity"
+            android:name="dev.hnatiuk.android.samples.navigation.complexsample.pages.main.MainNavigationActivity"
             android:exported="false" />
         <activity
-            android:name="dev.hnatiuk.navigation.complexsample.splash.SplashNavigationActivity"
+            android:name="dev.hnatiuk.android.samples.navigation.complexsample.splash.SplashNavigationActivity"
             android:exported="false" />
         <activity
-            android:name="dev.hnatiuk.navigation.simplesample.SimpleNavigationSampleActivity"
+            android:name="dev.hnatiuk.android.samples.navigation.simplesample.SimpleNavigationSampleActivity"
             android:exported="false" />
         <activity
-            android:name="dev.hnatiuk.navigation.NavigationSampleActivity"
+            android:name="dev.hnatiuk.android.samples.navigation.NavigationSampleActivity"
             android:exported="false" />
         <activity
-            android:name="dev.hnatiuk.overlay.OverlayActivity"
+            android:name="dev.hnatiuk.android.samples.overlay.OverlayActivity"
             android:exported="false" />
         <activity
             android:name="dev.hnatiuk.android.samples.compose.ComposeActivity"
@@ -41,11 +41,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dev.hnatiuk.screencapture.ScreenCaptureActivity"
+            android:name="dev.hnatiuk.android.samples.screencapture.ScreenCaptureActivity"
             android:exported="true" />
 
         <service
-            android:name="dev.hnatiuk.screencapture.lib.internal.ScreenCaptureService"
+            android:name="dev.hnatiuk.android.samples.screencapture.lib.internal.ScreenCaptureService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="mediaProjection" />

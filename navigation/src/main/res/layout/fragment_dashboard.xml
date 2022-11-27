@@ -25,13 +25,13 @@
 
         <!-- This is an example, real items are derived from the model: -->
 
-        <dev.hnatiuk.navigation.complexsample.views.DashboardItemView
+        <dev.hnatiuk.android.samples.navigation.complexsample.views.DashboardItemView
             android:id="@+id/greenBox"
             style="@style/DefaultDashboardItemStyle"
             app:color="#008800"
             app:title="Green Box" />
 
-        <dev.hnatiuk.navigation.complexsample.views.DashboardItemView
+        <dev.hnatiuk.android.samples.navigation.complexsample.views.DashboardItemView
             android:id="@+id/yellowBox"
             style="@style/DefaultDashboardItemStyle"
             app:color="#888800"

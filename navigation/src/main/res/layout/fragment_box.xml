@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dev.hnatiuk.navigation.simplesample.fragments.BoxFragment"
+    tools:context="dev.hnatiuk.android.samples.navigation.simplesample.fragments.BoxFragment"
     tools:background="#C4D8B0">
 
     <TextView

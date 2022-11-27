@@ -1,4 +1,4 @@
-package dev.hnatiuk.navigation
+package dev.hnatiuk.android.samples.navigation
 
 import org.junit.Test
 

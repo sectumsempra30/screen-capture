@@ -1,4 +1,4 @@
-package dev.hnatiuk.screencapture
+package dev.hnatiuk.android.samples.screencapture
 
 import org.junit.Test
 

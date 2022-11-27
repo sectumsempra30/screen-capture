@@ -1,4 +1,4 @@
-package dev.hnatiuk.motionlayout
+package dev.hnatiuk.android.samples.motionlayout
 
 import org.junit.Test
 

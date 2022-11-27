@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="dev.hnatiuk.navigation.simplesample.fragments.RootFragment"
+    tools:context="dev.hnatiuk.android.samples.navigation.simplesample.fragments.RootFragment"
     android:layout_height="match_parent">
 
     <Button
