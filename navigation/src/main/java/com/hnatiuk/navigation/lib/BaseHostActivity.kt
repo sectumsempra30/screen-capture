@@ -6,7 +6,7 @@ import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
-import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.android.samples.core.base.BaseActivity
 import dev.hnatiuk.navigation.R
 
 abstract class BaseHostActivity<VB : ViewBinding> : BaseActivity<VB>() {

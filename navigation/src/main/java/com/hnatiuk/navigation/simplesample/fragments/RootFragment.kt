@@ -1,9 +1,9 @@
 package dev.hnatiuk.navigation.simplesample.fragments
 
 import android.graphics.Color
-import dev.hnatiuk.core.base.BaseFragment
-import dev.hnatiuk.core.base.Inflate
-import dev.hnatiuk.core.extensions.toast
+import dev.hnatiuk.android.samples.core.base.BaseFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
+import dev.hnatiuk.android.samples.core.extensions.toast
 import dev.hnatiuk.navigation.databinding.FragmentRootBinding
 import dev.hnatiuk.navigation.lib.asRoute
 import dev.hnatiuk.navigation.lib.navController

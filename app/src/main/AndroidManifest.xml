@@ -29,7 +29,7 @@
             android:name="dev.hnatiuk.overlay.OverlayActivity"
             android:exported="false" />
         <activity
-            android:name="dev.hnatiuk.compose.ComposeActivity"
+            android:name="dev.hnatiuk.android.samples.compose.ComposeActivity"
             android:exported="false" />
         <activity
             android:name=".EntryActivity"

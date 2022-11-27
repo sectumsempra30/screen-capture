@@ -1,8 +1,8 @@
 package dev.hnatiuk.screencapture
 
 import android.view.LayoutInflater
-import dev.hnatiuk.core.base.BaseActivity
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.base.BaseActivity
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.screencapture.databinding.ActivityScreenCaptureBinding
 import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
 import dev.hnatiuk.screencapture.lib.ScreenCaptureRequest

@@ -5,8 +5,8 @@ import android.graphics.Point
 import android.view.Display
 import android.view.WindowInsets.Type.displayCutout
 import android.view.WindowInsets.Type.navigationBars
-import dev.hnatiuk.core.extensions.windowManager
-import dev.hnatiuk.core.utils.isAtLeastAndroidR
+import dev.hnatiuk.android.samples.core.extensions.windowManager
+import dev.hnatiuk.android.samples.core.utils.isAtLeastAndroidR
 
 class ScreenshotSpecs(context: Context) {
 

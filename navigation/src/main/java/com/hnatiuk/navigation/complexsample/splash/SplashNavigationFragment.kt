@@ -3,8 +3,8 @@ package dev.hnatiuk.navigation.complexsample.splash
 import android.os.Handler
 import android.os.Looper
 import androidx.core.os.postDelayed
-import dev.hnatiuk.core.base.BaseFragment
-import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.android.samples.core.base.BaseFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
 import dev.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
 import dev.hnatiuk.navigation.complexsample.graphs.SplashDestination
 import dev.hnatiuk.navigation.databinding.FragmentSplashNavigationBinding

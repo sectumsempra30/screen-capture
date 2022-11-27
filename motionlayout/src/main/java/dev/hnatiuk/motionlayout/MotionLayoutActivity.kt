@@ -2,7 +2,7 @@ package dev.hnatiuk.motionlayout
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 
 class MotionLayoutActivity : AppCompatActivity() {
 

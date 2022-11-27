@@ -2,7 +2,7 @@ package dev.hnatiuk.navigation.simplesample
 
 import android.view.LayoutInflater
 import androidx.navigation.NavController
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.navigation.databinding.ActivitySimpleNavigationSampleBinding
 import dev.hnatiuk.navigation.lib.BaseHostActivity
 

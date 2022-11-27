@@ -1,4 +1,4 @@
-package dev.hnatiuk.core.base
+package dev.hnatiuk.android.samples.core.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

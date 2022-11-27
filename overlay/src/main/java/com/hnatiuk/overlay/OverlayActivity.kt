@@ -1,9 +1,9 @@
 package dev.hnatiuk.overlay
 
 import android.view.LayoutInflater
-import dev.hnatiuk.core.base.BaseActivity
-import dev.hnatiuk.core.extensions.toast
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.base.BaseActivity
+import dev.hnatiuk.android.samples.core.extensions.toast
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.overlay.databinding.ActivityOverlayBinding
 import dev.hnatiuk.overlay.databinding.LayoutOverlayBinding
 import dev.hnatiuk.overlay.lib.OverlayManager

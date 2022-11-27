@@ -3,9 +3,9 @@ package dev.hnatiuk.screencapture.lib
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import dev.hnatiuk.core.utils.SimpleServiceConnection
-import dev.hnatiuk.core.utils.isAtLeastAndroidQ
-import dev.hnatiuk.core.utils.isAtLeastOreo
+import dev.hnatiuk.android.samples.core.utils.SimpleServiceConnection
+import dev.hnatiuk.android.samples.core.utils.isAtLeastAndroidQ
+import dev.hnatiuk.android.samples.core.utils.isAtLeastOreo
 import dev.hnatiuk.screencapture.lib.internal.ScreenCaptureService
 import dev.hnatiuk.screencapture.lib.internal.ScreenCaptureService.*
 import dev.hnatiuk.screencapture.lib.result.Screenshot

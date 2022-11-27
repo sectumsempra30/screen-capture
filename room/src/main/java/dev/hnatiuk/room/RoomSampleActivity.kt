@@ -3,9 +3,9 @@ package dev.hnatiuk.room
 import android.annotation.SuppressLint
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
-import dev.hnatiuk.core.base.BaseActivity
-import dev.hnatiuk.core.extensions.toast
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.base.BaseActivity
+import dev.hnatiuk.android.samples.core.extensions.toast
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.room.databinding.ActivityRoomSampleBinding
 import dev.hnatiuk.room.lib.*
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers

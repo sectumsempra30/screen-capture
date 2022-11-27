@@ -1,8 +1,8 @@
 package dev.hnatiuk.navigation.complexsample.pages.auth.signup
 
 import androidx.fragment.app.viewModels
-import dev.hnatiuk.core.base.BaseVMFragment
-import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.android.samples.core.base.BaseVMFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
 import dev.hnatiuk.navigation.databinding.FragmentSignUpBinding
 
 class SignUpFragment : BaseVMFragment<FragmentSignUpBinding, SignUpViewModel>() {

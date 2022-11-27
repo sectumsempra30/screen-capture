@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContract
-import dev.hnatiuk.core.extensions.mediaProjectionManager
+import dev.hnatiuk.android.samples.core.extensions.mediaProjectionManager
 import java.lang.ref.WeakReference
 
 class ScreenCaptureRequest(

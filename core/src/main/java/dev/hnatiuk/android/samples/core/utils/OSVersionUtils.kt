@@ -1,4 +1,4 @@
-package dev.hnatiuk.core.utils
+package dev.hnatiuk.android.samples.core.utils
 
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES

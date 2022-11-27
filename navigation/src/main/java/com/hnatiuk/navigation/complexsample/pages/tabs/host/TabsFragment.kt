@@ -4,7 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 
-import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.android.samples.core.base.Inflate
 import dev.hnatiuk.navigation.R
 import dev.hnatiuk.navigation.complexsample.graphs.TabsDestination
 import dev.hnatiuk.navigation.complexsample.graphs.createTabsGraph

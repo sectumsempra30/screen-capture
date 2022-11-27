@@ -2,8 +2,8 @@ package dev.hnatiuk.navigation
 
 import android.content.Intent
 import android.view.LayoutInflater
-import dev.hnatiuk.core.base.BaseActivity
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.base.BaseActivity
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.navigation.complexsample.splash.SplashNavigationActivity
 import dev.hnatiuk.navigation.databinding.ActivityNavigationSampleBinding
 import dev.hnatiuk.navigation.simplesample.SimpleNavigationSampleActivity

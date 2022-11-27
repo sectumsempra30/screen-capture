@@ -4,9 +4,9 @@ import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.view.MotionEvent
 import android.widget.EditText
-import dev.hnatiuk.core.base.BaseFragment
-import dev.hnatiuk.core.base.Inflate
-import dev.hnatiuk.core.utils.hideKeyboard
+import dev.hnatiuk.android.samples.core.base.BaseFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
+import dev.hnatiuk.android.samples.core.utils.hideKeyboard
 import dev.hnatiuk.other.databinding.FragmentEditTextLostFocusOutsideBinding
 
 class FragmentEditTextLostFocusOutside : BaseFragment<FragmentEditTextLostFocusOutsideBinding>() {

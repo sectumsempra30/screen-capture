@@ -1,4 +1,4 @@
-package dev.hnatiuk.core.utils
+package dev.hnatiuk.android.samples.core.utils
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

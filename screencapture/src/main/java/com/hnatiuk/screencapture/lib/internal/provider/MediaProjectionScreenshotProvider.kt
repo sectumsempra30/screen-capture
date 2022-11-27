@@ -15,7 +15,7 @@ import android.os.HandlerThread
 import android.os.Looper
 import android.view.Surface
 import androidx.core.os.postDelayed
-import dev.hnatiuk.core.extensions.mediaProjectionManager
+import dev.hnatiuk.android.samples.core.extensions.mediaProjectionManager
 import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
 import dev.hnatiuk.screencapture.lib.internal.Utils
 import dev.hnatiuk.screencapture.lib.ScreenshotException

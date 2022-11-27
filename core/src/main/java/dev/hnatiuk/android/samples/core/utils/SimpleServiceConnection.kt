@@ -1,4 +1,4 @@
-package dev.hnatiuk.core.utils
+package dev.hnatiuk.android.samples.core.utils
 
 import android.content.ComponentName
 import android.content.ServiceConnection

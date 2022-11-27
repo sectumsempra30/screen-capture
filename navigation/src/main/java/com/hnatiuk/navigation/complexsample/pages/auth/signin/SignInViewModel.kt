@@ -2,7 +2,7 @@ package dev.hnatiuk.navigation.complexsample.pages.auth.signin
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dev.hnatiuk.core.utils.SingleLiveEvent
+import dev.hnatiuk.android.samples.core.utils.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

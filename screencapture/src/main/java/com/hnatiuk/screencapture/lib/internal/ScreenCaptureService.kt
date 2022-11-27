@@ -13,10 +13,10 @@ import android.os.IBinder
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.PRIORITY_MIN
-import dev.hnatiuk.core.BuildConfig
-import dev.hnatiuk.core.extensions.notificationManager
-import dev.hnatiuk.core.extensions.parcelable
-import dev.hnatiuk.core.utils.isAtLeastOreo
+import dev.hnatiuk.android.samples.core.BuildConfig
+import dev.hnatiuk.android.samples.core.extensions.notificationManager
+import dev.hnatiuk.android.samples.core.extensions.parcelable
+import dev.hnatiuk.android.samples.core.utils.isAtLeastOreo
 import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
 import dev.hnatiuk.screencapture.lib.result.ScreenshotResult
 import dev.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2

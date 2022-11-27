@@ -13,7 +13,7 @@ import android.os.Handler
 import android.os.HandlerThread
 import android.util.Log
 import android.view.Surface
-import dev.hnatiuk.core.extensions.mediaProjectionManager
+import dev.hnatiuk.android.samples.core.extensions.mediaProjectionManager
 import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
 import dev.hnatiuk.screencapture.lib.ScreenshotException
 import dev.hnatiuk.screencapture.lib.internal.ScreenshotSpecs

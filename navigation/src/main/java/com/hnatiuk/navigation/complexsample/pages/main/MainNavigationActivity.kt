@@ -4,7 +4,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
-import dev.hnatiuk.core.extensions.toast
+import dev.hnatiuk.android.samples.core.extensions.toast
 import dev.hnatiuk.navigation.complexsample.graphs.EntryDestination
 import dev.hnatiuk.navigation.complexsample.graphs.getEntryGraph
 import dev.hnatiuk.navigation.databinding.ActivityNavigationMainBinding

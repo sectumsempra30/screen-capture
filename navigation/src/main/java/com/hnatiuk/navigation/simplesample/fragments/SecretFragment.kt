@@ -1,7 +1,7 @@
 package dev.hnatiuk.navigation.simplesample.fragments
 
-import dev.hnatiuk.core.base.BaseFragment
-import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.android.samples.core.base.BaseFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
 import dev.hnatiuk.navigation.databinding.FragmentSecretBinding
 import dev.hnatiuk.navigation.lib.asRoute
 import dev.hnatiuk.navigation.lib.navController

@@ -6,7 +6,7 @@ import android.graphics.PixelFormat
 import android.view.View
 import android.view.WindowManager
 import android.view.WindowManager.LayoutParams
-import dev.hnatiuk.core.utils.isAtLeastOreo
+import dev.hnatiuk.android.samples.core.utils.isAtLeastOreo
 
 class OverlayManager(private val context: Context) {
 

@@ -1,4 +1,4 @@
-package dev.hnatiuk.compose.lib
+package dev.hnatiuk.android.samples.compose.lib
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionContext
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 
 abstract class BaseComposeActivity : ComponentActivity() {
 

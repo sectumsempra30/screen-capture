@@ -3,7 +3,7 @@ package dev.hnatiuk.navigation.complexsample.splash
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import androidx.navigation.NavController
-import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.navigation.complexsample.graphs.createSplashGraph
 import dev.hnatiuk.navigation.databinding.ActivityNavigationSplashBinding
 import dev.hnatiuk.navigation.lib.BaseHostActivity

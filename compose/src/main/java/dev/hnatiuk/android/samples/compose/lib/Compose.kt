@@ -1,4 +1,4 @@
-package dev.hnatiuk.compose.lib
+package dev.hnatiuk.android.samples.compose.lib
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

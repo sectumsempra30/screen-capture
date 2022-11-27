@@ -2,8 +2,8 @@ package dev.hnatiuk.navigation.simplesample.fragments
 
 import android.os.Parcelable
 import androidx.core.os.bundleOf
-import dev.hnatiuk.core.base.BaseFragment
-import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.android.samples.core.base.BaseFragment
+import dev.hnatiuk.android.samples.core.base.Inflate
 import dev.hnatiuk.navigation.databinding.FragmentBoxBinding
 import dev.hnatiuk.navigation.lib.asRoute
 import dev.hnatiuk.navigation.lib.navController
