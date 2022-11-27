@@ -1,7 +1,7 @@
-package com.hnatiuk.screencapture.lib.result
+package dev.hnatiuk.screencapture.lib.result
 
-import com.hnatiuk.screencapture.lib.internal.Utils
-import com.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
+import dev.hnatiuk.screencapture.lib.internal.Utils
+import dev.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
 
 class ScreenResult(val spec: ScreenshotSpecs? = null) : ScreenshotResult {
 

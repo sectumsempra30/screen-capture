@@ -1,4 +1,4 @@
-package com.hnatiuk.core.extensions
+package dev.hnatiuk.core.extensions
 
 import android.widget.Toast
 import androidx.fragment.app.Fragment

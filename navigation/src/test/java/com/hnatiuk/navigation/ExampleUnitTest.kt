@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation
+package dev.hnatiuk.navigation
 
 import org.junit.Test
 

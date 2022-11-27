@@ -1,10 +1,10 @@
-package com.hnatiuk.navigation.simplesample.fragments
+package dev.hnatiuk.navigation.simplesample.fragments
 
-import com.hnatiuk.core.base.BaseFragment
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.databinding.FragmentSecretBinding
-import com.hnatiuk.navigation.lib.asRoute
-import com.hnatiuk.navigation.lib.navController
+import dev.hnatiuk.core.base.BaseFragment
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.navigation.databinding.FragmentSecretBinding
+import dev.hnatiuk.navigation.lib.asRoute
+import dev.hnatiuk.navigation.lib.navController
 
 class SecretFragment : BaseFragment<FragmentSecretBinding>() {
 
@@ -16,7 +16,7 @@ class SecretFragment : BaseFragment<FragmentSecretBinding>() {
             navController.popBackStack()
         }
         closeTheWholeBox.setOnClickListener {
-            navController.popBackStack(com.hnatiuk.navigation.simplesample.MainRoute.ROOT.asRoute, false)
+            navController.popBackStack(dev.hnatiuk.navigation.simplesample.MainRoute.ROOT.asRoute, false)
         }
     }
 }

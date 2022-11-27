@@ -1,13 +1,13 @@
-package com.hnatiuk.navigation.complexsample.graphs
+package dev.hnatiuk.navigation.complexsample.graphs
 
 import androidx.navigation.NavController
 import androidx.navigation.activity
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
-import com.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivity
-import com.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
-import com.hnatiuk.navigation.complexsample.splash.SplashNavigationFragment
-import com.hnatiuk.navigation.lib.getDestinationNavType
+import dev.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivity
+import dev.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
+import dev.hnatiuk.navigation.complexsample.splash.SplashNavigationFragment
+import dev.hnatiuk.navigation.lib.getDestinationNavType
 
 enum class SplashDestination {
     SPLASH,

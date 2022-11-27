@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture
+package dev.hnatiuk.screencapture
 
 import org.junit.Test
 

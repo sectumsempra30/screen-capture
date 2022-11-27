@@ -1,12 +1,12 @@
-package com.hnatiuk.navigation.complexsample.graphs
+package dev.hnatiuk.navigation.complexsample.graphs
 
 import androidx.navigation.NavController
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
-import com.hnatiuk.navigation.complexsample.pages.auth.signin.SignInFragment
-import com.hnatiuk.navigation.complexsample.pages.auth.signup.SignUpFragment
-import com.hnatiuk.navigation.complexsample.graphs.EntryDestination.*
-import com.hnatiuk.navigation.complexsample.pages.tabs.host.TabsFragment
+import dev.hnatiuk.navigation.complexsample.pages.auth.signin.SignInFragment
+import dev.hnatiuk.navigation.complexsample.pages.auth.signup.SignUpFragment
+import dev.hnatiuk.navigation.complexsample.graphs.EntryDestination.*
+import dev.hnatiuk.navigation.complexsample.pages.tabs.host.TabsFragment
 
 enum class EntryDestination {
     SIGN_IN,

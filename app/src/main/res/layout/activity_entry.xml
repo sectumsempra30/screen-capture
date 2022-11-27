@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/container"
     android:layout_height="match_parent"
-    tools:context="com.hnatiuk.entry.EntryActivity">
+    tools:context="dev.hnatiuk.entry.EntryActivity">
 
     <Button
         android:id="@+id/toScreenCapture"

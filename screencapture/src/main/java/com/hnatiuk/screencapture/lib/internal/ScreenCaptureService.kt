@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib.internal
+package dev.hnatiuk.screencapture.lib.internal
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -13,13 +13,13 @@ import android.os.IBinder
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.PRIORITY_MIN
-import com.hnatiuk.core.BuildConfig
-import com.hnatiuk.core.extensions.notificationManager
-import com.hnatiuk.core.extensions.parcelable
-import com.hnatiuk.core.utils.isAtLeastOreo
-import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
-import com.hnatiuk.screencapture.lib.result.ScreenshotResult
-import com.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
+import dev.hnatiuk.core.BuildConfig
+import dev.hnatiuk.core.extensions.notificationManager
+import dev.hnatiuk.core.extensions.parcelable
+import dev.hnatiuk.core.utils.isAtLeastOreo
+import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
+import dev.hnatiuk.screencapture.lib.result.ScreenshotResult
+import dev.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
 
 class ScreenCaptureService : Service() {
 

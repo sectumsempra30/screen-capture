@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib.internal
+package dev.hnatiuk.screencapture.lib.internal
 
 import android.hardware.display.VirtualDisplay
 import android.media.Image

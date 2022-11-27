@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.lib
+package dev.hnatiuk.navigation.lib
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
-import com.hnatiuk.core.base.BaseVMFragment
+import dev.hnatiuk.core.base.BaseVMFragment
 
 abstract class BaseHostFragment<VB : ViewBinding, VM : ViewModel> : BaseVMFragment<VB, VM>() {
 

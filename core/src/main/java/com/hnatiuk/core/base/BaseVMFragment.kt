@@ -1,4 +1,4 @@
-package com.hnatiuk.core.base
+package dev.hnatiuk.core.base
 
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding

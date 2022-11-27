@@ -1,12 +1,12 @@
-package com.hnatiuk.navigation
+package dev.hnatiuk.navigation
 
 import android.content.Intent
 import android.view.LayoutInflater
-import com.hnatiuk.core.base.BaseActivity
-import com.hnatiuk.core.utils.SimpleIntentProvider
-import com.hnatiuk.navigation.complexsample.splash.SplashNavigationActivity
-import com.hnatiuk.navigation.databinding.ActivityNavigationSampleBinding
-import com.hnatiuk.navigation.simplesample.SimpleNavigationSampleActivity
+import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.navigation.complexsample.splash.SplashNavigationActivity
+import dev.hnatiuk.navigation.databinding.ActivityNavigationSampleBinding
+import dev.hnatiuk.navigation.simplesample.SimpleNavigationSampleActivity
 
 class NavigationSampleActivity : BaseActivity<ActivityNavigationSampleBinding>() {
 

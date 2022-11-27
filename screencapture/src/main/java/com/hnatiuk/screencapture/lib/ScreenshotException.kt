@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib
+package dev.hnatiuk.screencapture.lib
 
 sealed class ScreenshotException : RuntimeException {
 

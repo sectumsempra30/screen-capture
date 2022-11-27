@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.lib
+package dev.hnatiuk.navigation.lib
 
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -6,8 +6,8 @@ import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
-import com.hnatiuk.core.base.BaseActivity
-import com.hnatiuk.navigation.R
+import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.navigation.R
 
 abstract class BaseHostActivity<VB : ViewBinding> : BaseActivity<VB>() {
 

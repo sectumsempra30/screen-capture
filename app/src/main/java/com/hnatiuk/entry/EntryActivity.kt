@@ -1,12 +1,12 @@
-package com.hnatiuk.entry
+package dev.hnatiuk.entry
 
 import android.view.LayoutInflater
-import com.hnatiuk.core.base.BaseActivity
-import com.hnatiuk.core.utils.SimpleIntentProvider
-import com.hnatiuk.features.databinding.ActivityEntryBinding
-import com.hnatiuk.navigation.NavigationSampleActivity
-import com.hnatiuk.overlay.OverlayActivity
-import com.hnatiuk.screencapture.ScreenCaptureActivity
+import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.features.databinding.ActivityEntryBinding
+import dev.hnatiuk.navigation.NavigationSampleActivity
+import dev.hnatiuk.overlay.OverlayActivity
+import dev.hnatiuk.screencapture.ScreenCaptureActivity
 import dev.hnatiuk.compose.ComposeActivity
 import dev.hnatiuk.motionlayout.MotionLayoutActivity
 import dev.hnatiuk.room.RoomSampleActivity

@@ -1,10 +1,10 @@
-package com.hnatiuk.navigation.complexsample.graphs.tabs
+package dev.hnatiuk.navigation.complexsample.graphs.tabs
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
-import com.hnatiuk.navigation.complexsample.pages.tabs.profile.ProfileFragment
+import dev.hnatiuk.navigation.complexsample.pages.tabs.profile.ProfileFragment
 
 enum class ProfileDestinations {
     PROFILE

@@ -1,13 +1,13 @@
-package com.hnatiuk.navigation.simplesample.fragments
+package dev.hnatiuk.navigation.simplesample.fragments
 
 import android.os.Parcelable
 import androidx.core.os.bundleOf
-import com.hnatiuk.core.base.BaseFragment
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.databinding.FragmentBoxBinding
-import com.hnatiuk.navigation.lib.asRoute
-import com.hnatiuk.navigation.lib.navController
-import com.hnatiuk.navigation.simplesample.MainRoute
+import dev.hnatiuk.core.base.BaseFragment
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.navigation.databinding.FragmentBoxBinding
+import dev.hnatiuk.navigation.lib.asRoute
+import dev.hnatiuk.navigation.lib.navController
+import dev.hnatiuk.navigation.simplesample.MainRoute
 import kotlinx.parcelize.Parcelize
 import kotlin.random.Random
 

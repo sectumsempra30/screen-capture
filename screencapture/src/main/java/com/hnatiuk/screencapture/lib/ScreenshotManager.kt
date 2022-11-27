@@ -1,15 +1,15 @@
-package com.hnatiuk.screencapture.lib
+package dev.hnatiuk.screencapture.lib
 
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import com.hnatiuk.core.utils.SimpleServiceConnection
-import com.hnatiuk.core.utils.isAtLeastAndroidQ
-import com.hnatiuk.core.utils.isAtLeastOreo
-import com.hnatiuk.screencapture.lib.internal.ScreenCaptureService
-import com.hnatiuk.screencapture.lib.internal.ScreenCaptureService.*
-import com.hnatiuk.screencapture.lib.result.Screenshot
-import com.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
+import dev.hnatiuk.core.utils.SimpleServiceConnection
+import dev.hnatiuk.core.utils.isAtLeastAndroidQ
+import dev.hnatiuk.core.utils.isAtLeastOreo
+import dev.hnatiuk.screencapture.lib.internal.ScreenCaptureService
+import dev.hnatiuk.screencapture.lib.internal.ScreenCaptureService.*
+import dev.hnatiuk.screencapture.lib.result.Screenshot
+import dev.hnatiuk.screencapture.lib_v2.MediaProjectionScreenshotProviderV2
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
 import java.lang.ref.WeakReference

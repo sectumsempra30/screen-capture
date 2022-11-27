@@ -1,4 +1,4 @@
-package com.hnatiuk.core
+package dev.hnatiuk.core
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.hnatiuk.overlay
+package dev.hnatiuk.overlay
 
 import org.junit.Test
 

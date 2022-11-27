@@ -1,12 +1,12 @@
-package com.hnatiuk.screencapture
+package dev.hnatiuk.screencapture
 
 import android.view.LayoutInflater
-import com.hnatiuk.core.base.BaseActivity
-import com.hnatiuk.core.utils.SimpleIntentProvider
-import com.hnatiuk.screencapture.databinding.ActivityScreenCaptureBinding
-import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
-import com.hnatiuk.screencapture.lib.ScreenCaptureRequest
-import com.hnatiuk.screencapture.lib.ScreenshotManager
+import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.screencapture.databinding.ActivityScreenCaptureBinding
+import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
+import dev.hnatiuk.screencapture.lib.ScreenCaptureRequest
+import dev.hnatiuk.screencapture.lib.ScreenshotManager
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 
 class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {

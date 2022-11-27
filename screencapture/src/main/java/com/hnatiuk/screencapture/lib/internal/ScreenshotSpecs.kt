@@ -1,12 +1,12 @@
-package com.hnatiuk.screencapture.lib.internal
+package dev.hnatiuk.screencapture.lib.internal
 
 import android.content.Context
 import android.graphics.Point
 import android.view.Display
 import android.view.WindowInsets.Type.displayCutout
 import android.view.WindowInsets.Type.navigationBars
-import com.hnatiuk.core.extensions.windowManager
-import com.hnatiuk.core.utils.isAtLeastAndroidR
+import dev.hnatiuk.core.extensions.windowManager
+import dev.hnatiuk.core.utils.isAtLeastAndroidR
 
 class ScreenshotSpecs(context: Context) {
 

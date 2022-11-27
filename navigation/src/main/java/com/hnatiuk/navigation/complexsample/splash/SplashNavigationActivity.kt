@@ -1,12 +1,12 @@
-package com.hnatiuk.navigation.complexsample.splash
+package dev.hnatiuk.navigation.complexsample.splash
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import androidx.navigation.NavController
-import com.hnatiuk.core.utils.SimpleIntentProvider
-import com.hnatiuk.navigation.complexsample.graphs.createSplashGraph
-import com.hnatiuk.navigation.databinding.ActivityNavigationSplashBinding
-import com.hnatiuk.navigation.lib.BaseHostActivity
+import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.navigation.complexsample.graphs.createSplashGraph
+import dev.hnatiuk.navigation.databinding.ActivityNavigationSplashBinding
+import dev.hnatiuk.navigation.lib.BaseHostActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @SuppressLint("CustomSplashScreen")

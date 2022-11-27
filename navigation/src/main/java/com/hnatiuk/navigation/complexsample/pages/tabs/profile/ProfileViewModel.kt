@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.pages.tabs.profile
+package dev.hnatiuk.navigation.complexsample.pages.tabs.profile
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

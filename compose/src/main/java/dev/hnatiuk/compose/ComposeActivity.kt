@@ -1,7 +1,7 @@
 package dev.hnatiuk.compose
 
 import androidx.compose.runtime.Composable
-import com.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.core.utils.SimpleIntentProvider
 import dev.hnatiuk.compose.lib.BaseComposeActivity
 import dev.hnatiuk.compose.lib.ButtonSample
 

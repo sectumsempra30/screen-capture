@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.pages.entrytab
+package dev.hnatiuk.navigation.complexsample.pages.entrytab
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

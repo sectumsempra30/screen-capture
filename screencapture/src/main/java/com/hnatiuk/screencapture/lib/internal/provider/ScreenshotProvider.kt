@@ -1,6 +1,6 @@
-package com.hnatiuk.screencapture.lib.internal.provider
+package dev.hnatiuk.screencapture.lib.internal.provider
 
-import com.hnatiuk.screencapture.lib.result.ScreenshotResult
+import dev.hnatiuk.screencapture.lib.result.ScreenshotResult
 
 interface ScreenshotProvider {
 

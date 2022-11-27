@@ -1,4 +1,4 @@
-package com.hnatiuk.core.utils
+package dev.hnatiuk.core.utils
 
 import android.content.Context
 import android.content.Intent

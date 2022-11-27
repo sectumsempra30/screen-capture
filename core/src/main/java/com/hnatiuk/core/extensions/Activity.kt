@@ -1,4 +1,4 @@
-package com.hnatiuk.core.extensions
+package dev.hnatiuk.core.extensions
 
 import android.app.Activity
 import android.widget.Toast

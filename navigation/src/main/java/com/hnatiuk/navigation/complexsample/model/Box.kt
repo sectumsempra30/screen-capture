@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.model
+package dev.hnatiuk.navigation.complexsample.model
 
 import androidx.annotation.StringRes
 

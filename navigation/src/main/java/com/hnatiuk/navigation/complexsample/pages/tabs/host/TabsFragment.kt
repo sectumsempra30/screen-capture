@@ -1,16 +1,16 @@
-package com.hnatiuk.navigation.complexsample.pages.tabs.host
+package dev.hnatiuk.navigation.complexsample.pages.tabs.host
 
 import androidx.fragment.app.viewModels
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.R
-import com.hnatiuk.navigation.complexsample.graphs.TabsDestination
-import com.hnatiuk.navigation.complexsample.graphs.createTabsGraph
-import com.hnatiuk.navigation.databinding.FragmentTabsBinding
-import com.hnatiuk.navigation.lib.BaseHostFragment
-import com.hnatiuk.navigation.lib.asRoute
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.navigation.R
+import dev.hnatiuk.navigation.complexsample.graphs.TabsDestination
+import dev.hnatiuk.navigation.complexsample.graphs.createTabsGraph
+import dev.hnatiuk.navigation.databinding.FragmentTabsBinding
+import dev.hnatiuk.navigation.lib.BaseHostFragment
+import dev.hnatiuk.navigation.lib.asRoute
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

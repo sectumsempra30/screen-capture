@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib.result
+package dev.hnatiuk.screencapture.lib.result
 
 interface ScreenshotResult {
 

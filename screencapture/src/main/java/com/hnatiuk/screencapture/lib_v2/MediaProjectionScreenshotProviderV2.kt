@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib_v2;
+package dev.hnatiuk.screencapture.lib_v2;
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -13,13 +13,13 @@ import android.os.Handler
 import android.os.HandlerThread
 import android.util.Log
 import android.view.Surface
-import com.hnatiuk.core.extensions.mediaProjectionManager
-import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
-import com.hnatiuk.screencapture.lib.ScreenshotException
-import com.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
-import com.hnatiuk.screencapture.lib.internal.Utils
-import com.hnatiuk.screencapture.lib.result.Screenshot
-import com.hnatiuk.screencapture.lib.result.ScreenshotId
+import dev.hnatiuk.core.extensions.mediaProjectionManager
+import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
+import dev.hnatiuk.screencapture.lib.ScreenshotException
+import dev.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
+import dev.hnatiuk.screencapture.lib.internal.Utils
+import dev.hnatiuk.screencapture.lib.result.Screenshot
+import dev.hnatiuk.screencapture.lib.result.ScreenshotId
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.subjects.PublishSubject
 import java.lang.ref.WeakReference

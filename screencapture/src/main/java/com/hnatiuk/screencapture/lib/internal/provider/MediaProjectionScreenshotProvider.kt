@@ -1,4 +1,4 @@
-package com.hnatiuk.screencapture.lib.internal.provider
+package dev.hnatiuk.screencapture.lib.internal.provider
 
 import android.content.Context
 import android.content.Intent
@@ -15,13 +15,13 @@ import android.os.HandlerThread
 import android.os.Looper
 import android.view.Surface
 import androidx.core.os.postDelayed
-import com.hnatiuk.core.extensions.mediaProjectionManager
-import com.hnatiuk.screencapture.lib.ScreenCaptureAccessData
-import com.hnatiuk.screencapture.lib.internal.Utils
-import com.hnatiuk.screencapture.lib.ScreenshotException
-import com.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
-import com.hnatiuk.screencapture.lib.result.ScreenResult
-import com.hnatiuk.screencapture.lib.result.Screenshot
+import dev.hnatiuk.core.extensions.mediaProjectionManager
+import dev.hnatiuk.screencapture.lib.ScreenCaptureAccessData
+import dev.hnatiuk.screencapture.lib.internal.Utils
+import dev.hnatiuk.screencapture.lib.ScreenshotException
+import dev.hnatiuk.screencapture.lib.internal.ScreenshotSpecs
+import dev.hnatiuk.screencapture.lib.result.ScreenResult
+import dev.hnatiuk.screencapture.lib.result.Screenshot
 import java.lang.ref.WeakReference
 
 class MediaProjectionScreenshotProvider(

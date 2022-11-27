@@ -1,13 +1,13 @@
-package com.hnatiuk.navigation.simplesample.fragments
+package dev.hnatiuk.navigation.simplesample.fragments
 
 import android.graphics.Color
-import com.hnatiuk.core.base.BaseFragment
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.core.extensions.toast
-import com.hnatiuk.navigation.databinding.FragmentRootBinding
-import com.hnatiuk.navigation.lib.asRoute
-import com.hnatiuk.navigation.lib.navController
-import com.hnatiuk.navigation.simplesample.MainRoute
+import dev.hnatiuk.core.base.BaseFragment
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.core.extensions.toast
+import dev.hnatiuk.navigation.databinding.FragmentRootBinding
+import dev.hnatiuk.navigation.lib.asRoute
+import dev.hnatiuk.navigation.lib.navController
+import dev.hnatiuk.navigation.simplesample.MainRoute
 
 class RootFragment : BaseFragment<FragmentRootBinding>() {
 

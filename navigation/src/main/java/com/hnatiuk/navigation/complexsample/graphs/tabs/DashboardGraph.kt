@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.graphs.tabs
+package dev.hnatiuk.navigation.complexsample.graphs.tabs
 
 enum class DashboardDestinations {
     BOXES,

@@ -1,12 +1,12 @@
-package com.hnatiuk.overlay
+package dev.hnatiuk.overlay
 
 import android.view.LayoutInflater
-import com.hnatiuk.core.base.BaseActivity
-import com.hnatiuk.core.extensions.toast
-import com.hnatiuk.core.utils.SimpleIntentProvider
-import com.hnatiuk.overlay.databinding.ActivityOverlayBinding
-import com.hnatiuk.overlay.databinding.LayoutOverlayBinding
-import com.hnatiuk.overlay.lib.OverlayManager
+import dev.hnatiuk.core.base.BaseActivity
+import dev.hnatiuk.core.extensions.toast
+import dev.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.overlay.databinding.ActivityOverlayBinding
+import dev.hnatiuk.overlay.databinding.LayoutOverlayBinding
+import dev.hnatiuk.overlay.lib.OverlayManager
 
 class OverlayActivity : BaseActivity<ActivityOverlayBinding>() {
 

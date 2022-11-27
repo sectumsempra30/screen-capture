@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.views
+package dev.hnatiuk.navigation.complexsample.views
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -9,9 +9,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
-import com.hnatiuk.navigation.R
-import com.hnatiuk.navigation.complexsample.model.Box
-import com.hnatiuk.navigation.databinding.ViewDashboardItemBinding
+import dev.hnatiuk.navigation.R
+import dev.hnatiuk.navigation.complexsample.model.Box
+import dev.hnatiuk.navigation.databinding.ViewDashboardItemBinding
 
 class DashboardItemView(
     context: Context,

@@ -1,4 +1,4 @@
-package com.hnatiuk.features
+package dev.hnatiuk.features
 
 import org.junit.Test
 

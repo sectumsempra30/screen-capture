@@ -10,7 +10,7 @@ android {
     compileSdk rootProject.ext.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId "com.hnatiuk.androidsamples"
+        applicationId "dev.hnatiuk.androidsamples"
         minSdk rootProject.ext.minSdkVersion
         targetSdk rootProject.ext.targetSdkVersion
         versionCode 1

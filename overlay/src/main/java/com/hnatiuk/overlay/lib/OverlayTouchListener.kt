@@ -1,4 +1,4 @@
-package com.hnatiuk.overlay.lib
+package dev.hnatiuk.overlay.lib
 
 import android.graphics.Point
 import android.graphics.PointF

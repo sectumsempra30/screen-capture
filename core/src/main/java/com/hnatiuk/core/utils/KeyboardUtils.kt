@@ -1,4 +1,4 @@
-package com.hnatiuk.core.utils
+package dev.hnatiuk.core.utils
 
 import android.content.Context
 import android.os.Handler
@@ -6,7 +6,7 @@ import android.os.Looper
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.core.os.postDelayed
-import com.hnatiuk.core.extensions.inputMethodManager
+import dev.hnatiuk.core.extensions.inputMethodManager
 
 private const val DEFAULT_SHOW_KEYBOARD_DELAY = 400L
 

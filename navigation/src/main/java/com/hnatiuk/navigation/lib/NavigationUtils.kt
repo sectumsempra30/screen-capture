@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.lib
+package dev.hnatiuk.navigation.lib
 
 import android.net.Uri
 import android.os.Bundle

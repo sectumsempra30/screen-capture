@@ -1,9 +1,9 @@
-package com.hnatiuk.navigation.complexsample.pages.tabs.profile
+package dev.hnatiuk.navigation.complexsample.pages.tabs.profile
 
 import androidx.fragment.app.viewModels
-import com.hnatiuk.core.base.BaseVMFragment
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.databinding.FragmentProfileBinding
+import dev.hnatiuk.core.base.BaseVMFragment
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.navigation.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

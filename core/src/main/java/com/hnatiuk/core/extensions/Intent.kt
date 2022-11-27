@@ -1,9 +1,9 @@
-package com.hnatiuk.core.extensions
+package dev.hnatiuk.core.extensions
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
-import com.hnatiuk.core.utils.isAtLeastAndroidTiramisu
+import dev.hnatiuk.core.utils.isAtLeastAndroidTiramisu
 
 inline fun <reified T : Parcelable> Intent.parcelable(key: String): T? = when {
     isAtLeastAndroidTiramisu() -> getParcelableExtra(key, T::class.java)

@@ -1,15 +1,15 @@
-package com.hnatiuk.navigation.complexsample.splash
+package dev.hnatiuk.navigation.complexsample.splash
 
 import android.os.Handler
 import android.os.Looper
 import androidx.core.os.postDelayed
-import com.hnatiuk.core.base.BaseFragment
-import com.hnatiuk.core.base.Inflate
-import com.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
-import com.hnatiuk.navigation.complexsample.graphs.SplashDestination
-import com.hnatiuk.navigation.databinding.FragmentSplashNavigationBinding
-import com.hnatiuk.navigation.lib.buildRoute
-import com.hnatiuk.navigation.lib.navController
+import dev.hnatiuk.core.base.BaseFragment
+import dev.hnatiuk.core.base.Inflate
+import dev.hnatiuk.navigation.complexsample.pages.main.MainNavigationActivityArg
+import dev.hnatiuk.navigation.complexsample.graphs.SplashDestination
+import dev.hnatiuk.navigation.databinding.FragmentSplashNavigationBinding
+import dev.hnatiuk.navigation.lib.buildRoute
+import dev.hnatiuk.navigation.lib.navController
 
 class SplashNavigationFragment : BaseFragment<FragmentSplashNavigationBinding>() {
 

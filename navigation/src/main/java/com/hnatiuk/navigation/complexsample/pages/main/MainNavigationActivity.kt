@@ -1,14 +1,14 @@
-package com.hnatiuk.navigation.complexsample.pages.main
+package dev.hnatiuk.navigation.complexsample.pages.main
 
 import android.os.Parcelable
 import android.view.LayoutInflater
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
-import com.hnatiuk.core.extensions.toast
-import com.hnatiuk.navigation.complexsample.graphs.EntryDestination
-import com.hnatiuk.navigation.complexsample.graphs.getEntryGraph
-import com.hnatiuk.navigation.databinding.ActivityNavigationMainBinding
-import com.hnatiuk.navigation.lib.BaseHostActivity
+import dev.hnatiuk.core.extensions.toast
+import dev.hnatiuk.navigation.complexsample.graphs.EntryDestination
+import dev.hnatiuk.navigation.complexsample.graphs.getEntryGraph
+import dev.hnatiuk.navigation.databinding.ActivityNavigationMainBinding
+import dev.hnatiuk.navigation.lib.BaseHostActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.parcelize.Parcelize
 

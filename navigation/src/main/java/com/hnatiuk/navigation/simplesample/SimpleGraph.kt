@@ -1,13 +1,13 @@
-package com.hnatiuk.navigation.simplesample
+package dev.hnatiuk.navigation.simplesample
 
 import androidx.navigation.NavController
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
-import com.hnatiuk.navigation.lib.getDestinationNavType
-import com.hnatiuk.navigation.simplesample.fragments.BoxArguments
-import com.hnatiuk.navigation.simplesample.fragments.BoxFragment
-import com.hnatiuk.navigation.simplesample.fragments.RootFragment
-import com.hnatiuk.navigation.simplesample.fragments.SecretFragment
+import dev.hnatiuk.navigation.lib.getDestinationNavType
+import dev.hnatiuk.navigation.simplesample.fragments.BoxArguments
+import dev.hnatiuk.navigation.simplesample.fragments.BoxFragment
+import dev.hnatiuk.navigation.simplesample.fragments.RootFragment
+import dev.hnatiuk.navigation.simplesample.fragments.SecretFragment
 
 enum class MainRoute {
     ROOT,

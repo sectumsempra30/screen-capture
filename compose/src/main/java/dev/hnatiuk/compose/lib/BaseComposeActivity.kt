@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionContext
-import com.hnatiuk.core.utils.SimpleIntentProvider
+import dev.hnatiuk.core.utils.SimpleIntentProvider
 
 abstract class BaseComposeActivity : ComponentActivity() {
 

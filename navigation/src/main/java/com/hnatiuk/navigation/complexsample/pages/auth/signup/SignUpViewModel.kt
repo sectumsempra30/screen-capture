@@ -1,4 +1,4 @@
-package com.hnatiuk.navigation.complexsample.pages.auth.signup
+package dev.hnatiuk.navigation.complexsample.pages.auth.signup
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
