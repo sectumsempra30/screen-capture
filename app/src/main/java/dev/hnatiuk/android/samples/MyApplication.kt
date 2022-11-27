@@ -1,8 +1,7 @@
-package dev.hnatiuk.entry
+package dev.hnatiuk.android.samples
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MyApplication : Application() {
-}
+class MyApplication : Application()

@@ -1,9 +1,9 @@
-package dev.hnatiuk.entry
+package dev.hnatiuk.android.samples
 
 import android.view.LayoutInflater
 import dev.hnatiuk.core.base.BaseActivity
 import dev.hnatiuk.core.utils.SimpleIntentProvider
-import dev.hnatiuk.features.databinding.ActivityEntryBinding
+import dev.hnatiuk.android.samples.databinding.ActivityEntryBinding
 import dev.hnatiuk.navigation.NavigationSampleActivity
 import dev.hnatiuk.overlay.OverlayActivity
 import dev.hnatiuk.screencapture.ScreenCaptureActivity

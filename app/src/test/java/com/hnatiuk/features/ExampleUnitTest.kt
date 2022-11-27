@@ -1,4 +1,4 @@
-package dev.hnatiuk.features
+package dev.hnatiuk.android.samples
 
 import org.junit.Test
 
