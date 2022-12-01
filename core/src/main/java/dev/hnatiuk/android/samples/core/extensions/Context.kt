@@ -5,8 +5,16 @@ import android.content.Context
 import android.media.projection.MediaProjectionManager
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import java.lang.IllegalStateException
 
+fun Context.toast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
+
+/**
+ * Context services
+ */
 val Context.windowManager: WindowManager
     get() = getService(Context.WINDOW_SERVICE)
 

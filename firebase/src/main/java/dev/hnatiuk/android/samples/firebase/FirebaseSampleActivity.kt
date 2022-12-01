@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import dev.hnatiuk.android.samples.core.base.BaseActivity
 import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.android.samples.firebase.databinding.ActivityFirebaseSampleBinding
-import java.util.Date
+import dev.hnatiuk.android.samples.firebase.remoteconfig.FirebaseRemoteConfigSampleFragment
 
 class FirebaseSampleActivity : BaseActivity<ActivityFirebaseSampleBinding>() {
 
@@ -12,14 +12,13 @@ class FirebaseSampleActivity : BaseActivity<ActivityFirebaseSampleBinding>() {
         get() = ActivityFirebaseSampleBinding::inflate
 
     override fun ActivityFirebaseSampleBinding.initUI() {
-        throwButton.setOnClickListener {
-            val message = binding.errorMessage
-                .text
-                .toString()
-                .ifEmpty { "Some error at ${Date()}" }
+        val instance = FirebaseRemoteConfigSampleFragment.newInstance()
 
-            throw ExceptionForFirebase(message)
-        }
+        fragmentTitle.text = instance::class.java.simpleName
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragmentContainer, instance)
+            .commit()
     }
 
     internal class ExceptionForFirebase(message: String) : RuntimeException(message)
