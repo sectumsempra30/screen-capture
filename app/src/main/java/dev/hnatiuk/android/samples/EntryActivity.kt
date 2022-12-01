@@ -1,16 +1,16 @@
 package dev.hnatiuk.android.samples
 
 import android.view.LayoutInflater
+import dev.hnatiuk.android.samples.compose.ComposeActivity
 import dev.hnatiuk.android.samples.core.base.BaseActivity
 import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
 import dev.hnatiuk.android.samples.databinding.ActivityEntryBinding
-import dev.hnatiuk.android.samples.navigation.NavigationSampleActivity
-import dev.hnatiuk.android.samples.overlay.OverlayActivity
-import dev.hnatiuk.android.samples.screencapture.ScreenCaptureActivity
-import dev.hnatiuk.android.samples.compose.ComposeActivity
 import dev.hnatiuk.android.samples.firebase.FirebaseSampleActivity
 import dev.hnatiuk.android.samples.motionlayout.MotionLayoutActivity
+import dev.hnatiuk.android.samples.navigation.NavigationSampleActivity
+import dev.hnatiuk.android.samples.overlay.OverlayActivity
 import dev.hnatiuk.android.samples.room.RoomSampleActivity
+import dev.hnatiuk.android.samples.screencapture.ScreenCaptureActivity
 
 class EntryActivity : BaseActivity<ActivityEntryBinding>() {
 
