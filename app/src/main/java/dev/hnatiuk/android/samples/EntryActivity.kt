@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import dev.hnatiuk.android.samples.compose.ComposeActivity
 import dev.hnatiuk.android.samples.core.base.BaseActivity
 import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
+import dev.hnatiuk.android.samples.course.CourseComposeActivity
 import dev.hnatiuk.android.samples.databinding.ActivityEntryBinding
-import dev.hnatiuk.android.samples.firebase.FirebaseSampleActivity
 import dev.hnatiuk.android.samples.motionlayout.MotionLayoutActivity
 import dev.hnatiuk.android.samples.navigation.NavigationSampleActivity
 import dev.hnatiuk.android.samples.overlay.OverlayActivity
@@ -37,7 +37,7 @@ class EntryActivity : BaseActivity<ActivityEntryBinding>() {
             startActivity(ComposeActivity.getIntent(this@EntryActivity))
         }
 
-        performSetup(activity = FirebaseSampleActivity)
+        performSetup(activity = CourseComposeActivity)
     }
 
     private fun performSetup(activity: SimpleIntentProvider) {

@@ -32,6 +32,9 @@
             android:name="dev.hnatiuk.android.samples.compose.ComposeActivity"
             android:exported="false" />
         <activity
+            android:name="dev.hnatiuk.android.samples.course.CourseComposeActivity"
+            android:exported="false" />
+        <activity
             android:name=".EntryActivity"
             android:exported="true">
             <intent-filter>
