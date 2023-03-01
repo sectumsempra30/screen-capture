@@ -10,7 +10,7 @@ class CourseComposeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HomeScreen("Olena Stepaniuk")
+           HomeScreen("Olena Stepaniuk")
         }
     }
 
