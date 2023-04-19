@@ -62,6 +62,7 @@ dependencies {
     implementation project(":compose")
     implementation project(":firebase")
     implementation project(":other")
+    implementation project(":compose-bookshelf")
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout

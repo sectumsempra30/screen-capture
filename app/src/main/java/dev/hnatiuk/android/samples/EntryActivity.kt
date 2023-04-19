@@ -2,9 +2,9 @@ package dev.hnatiuk.android.samples
 
 import android.view.LayoutInflater
 import dev.hnatiuk.android.samples.compose.ComposeActivity
+import dev.hnatiuk.android.samples.compose_bookshelf.presentation.pages.main.BookShelfActivity
 import dev.hnatiuk.android.samples.core.base.BaseActivity
 import dev.hnatiuk.android.samples.core.utils.SimpleIntentProvider
-import dev.hnatiuk.android.samples.course.CourseComposeActivity
 import dev.hnatiuk.android.samples.databinding.ActivityEntryBinding
 import dev.hnatiuk.android.samples.motionlayout.MotionLayoutActivity
 import dev.hnatiuk.android.samples.navigation.NavigationSampleActivity
@@ -37,7 +37,7 @@ class EntryActivity : BaseActivity<ActivityEntryBinding>() {
             startActivity(ComposeActivity.getIntent(this@EntryActivity))
         }
 
-        performSetup(activity = CourseComposeActivity)
+        performSetup(activity = BookShelfActivity)
     }
 
     private fun performSetup(activity: SimpleIntentProvider) {
