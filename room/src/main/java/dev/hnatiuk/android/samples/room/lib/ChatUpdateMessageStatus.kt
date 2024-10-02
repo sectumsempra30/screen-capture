@@ -1,6 +1,9 @@
 package dev.hnatiuk.android.samples.room.lib;
 
+import androidx.room.ColumnInfo
+import androidx.room.PrimaryKey
+
 data class ChatUpdateMessageStatus(
-    val id: String,
-    val lastMessageStatus: MessageStatus
+    @PrimaryKey val id: String,
+    @ColumnInfo(name = "lastMessageStatus") val lastMessageStatus: MessageStatus
 )

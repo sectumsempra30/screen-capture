@@ -37,4 +37,6 @@ dependencies {
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="dev.hnatiuk.android.samples.data.store"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="dev.hnatiuk.android.sample.data.store.DataStoreSampleActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

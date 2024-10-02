@@ -1,6 +1,7 @@
 package dev.hnatiuk.android.samples
 
 import android.view.LayoutInflater
+import dev.hnatiuk.android.sample.data.store.DataStoreSampleActivity
 import dev.hnatiuk.android.samples.compose.ComposeActivity
 import dev.hnatiuk.android.samples.compose_bookshelf.presentation.pages.main.BookShelfActivity
 import dev.hnatiuk.android.samples.core.base.BaseActivity
@@ -37,7 +38,7 @@ class EntryActivity : BaseActivity<ActivityEntryBinding>() {
             startActivity(ComposeActivity.getIntent(this@EntryActivity))
         }
 
-        performSetup(activity = BookShelfActivity)
+        performSetup(activity = DataStoreSampleActivity)
     }
 
     private fun performSetup(activity: SimpleIntentProvider) {

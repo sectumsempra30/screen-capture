@@ -10,6 +10,7 @@ dependencyResolutionManagement {
   repositories {
     google()
     mavenCentral()
+    maven { url "https://jitpack.io" }
   }
 }
 rootProject.name = "Android Samples"
@@ -24,3 +25,4 @@ include ':compose'
 include ':other'
 include ':firebase'
 include ':compose-bookshelf'
+include ':data-store'

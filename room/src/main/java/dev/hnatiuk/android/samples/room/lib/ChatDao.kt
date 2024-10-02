@@ -1,6 +1,7 @@
 package dev.hnatiuk.android.samples.room.lib
 
 import androidx.room.*
+import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
@@ -12,8 +13,14 @@ interface ChatDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertRx(chat: ChatEntity?): Single<Long>
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertManyRx(chats: List<ChatEntity>): Completable
+
     @Update(entity = ChatEntity::class)
     fun updateRx(update: ChatUpdateMessageStatus): Single<Int>
+
+    @Update(entity = ChatEntity::class)
+    fun updateNameAndMessage(updates: List<ChatNameMessageUpdate>): Completable
     //
 
     @Query("SELECT * FROM chats")

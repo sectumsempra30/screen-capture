@@ -16,16 +16,16 @@ class ScreenCaptureActivity : BaseActivity<ActivityScreenCaptureBinding>() {
     override val bindingFactory: (LayoutInflater) -> ActivityScreenCaptureBinding
         get() = ActivityScreenCaptureBinding::inflate
 
-    private val requestScreenshotPermission = registerForActivityResult(ScreenCaptureRequest(this)) {
-        val data = it.data
-        if (it.resultCode == RESULT_OK && data != null) {
-            screenshotManager.onPermissionGranted(ScreenCaptureAccessData(it.resultCode, data))
-        }
-    }
+//    private val requestScreenshotPermission = registerForActivityResult(ScreenCaptureRequest(this)) {
+//        val data = it.data
+//        if (it.resultCode == RESULT_OK && data != null) {
+//            screenshotManager.onPermissionGranted(ScreenCaptureAccessData(it.resultCode, data))
+//        }
+//    }
 
     override fun ActivityScreenCaptureBinding.initUI() {
         requestPermission.setOnClickListener {
-            requestScreenshotPermission.launch(Unit)
+            //requestScreenshotPermission.launch(Unit)
         }
 
         makeScreenshot.setOnClickListener {

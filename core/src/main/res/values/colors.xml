@@ -9,4 +9,6 @@
   <color name="white">#FFFFFFFF</color>
 
   <color name="defaultDashboardColor">#008800</color>
+
+  <color name="p900">#CD4631</color>
 </resources>

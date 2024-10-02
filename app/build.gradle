@@ -63,6 +63,7 @@ dependencies {
     implementation project(":firebase")
     implementation project(":other")
     implementation project(":compose-bookshelf")
+    implementation project(":data-store")
 
     implementation appDependencies.appCompat
     implementation appDependencies.constraintLayout
@@ -78,4 +79,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-config-ktx'
+
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+    def lottieVersion = "4.1.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //implementation 'com.redmadrobot:input-mask-android:5.0.0'
+
+    implementation 'com.github.santalu:maskara:1.0.0'
 }

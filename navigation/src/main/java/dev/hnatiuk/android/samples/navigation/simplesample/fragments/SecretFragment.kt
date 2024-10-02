@@ -16,7 +16,8 @@ class SecretFragment : BaseFragment<FragmentSecretBinding>() {
             navController.popBackStack()
         }
         closeTheWholeBox.setOnClickListener {
-            navController.popBackStack(dev.hnatiuk.android.samples.navigation.simplesample.MainRoute.ROOT.asRoute, false)
+            //navController.popBackStack(dev.hnatiuk.android.samples.navigation.simplesample.MainRoute.ROOT.asRoute, false)
+            navController.popBackStack()
         }
     }
 }

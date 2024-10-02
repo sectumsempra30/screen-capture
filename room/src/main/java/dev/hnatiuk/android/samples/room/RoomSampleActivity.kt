@@ -53,7 +53,7 @@ class RoomSampleActivity : BaseActivity<ActivityRoomSampleBinding>() {
         val mock = getMockChat()
 
         insert.setOnClickListener {
-            dao.insertRx(mock)
+            dao.insertManyRx(getMocks())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -63,16 +63,29 @@ class RoomSampleActivity : BaseActivity<ActivityRoomSampleBinding>() {
         }
 
         updatePart.setOnClickListener {
-            dao.updateRx(
-                ChatUpdateMessageStatus(
-                    id = "2",
-                    lastMessageStatus = MessageStatus.READ
+//            dao.updateRx(
+//                ChatUpdateMessageStatus(
+//                    id = "2",
+//                    lastMessageStatus = MessageStatus.READ
+//                )
+//            )
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(
+//                    { toast("Update-Success | id = $it") },
+//                    { toast("Update-Error | error = $it") },
+//                )
+
+            dao.updateNameAndMessage(
+                updates = listOf(
+                    ChatNameMessageUpdate(id = "0", name = "Максим Халін #0 | updated", lastMessageText = "Something"),
+                    ChatNameMessageUpdate(id = "1", name = "Максим Халін #1 | updated", lastMessageText = "Something")
                 )
             )
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                    { toast("Update-Success | id = $it") },
+                    { toast("Update-Success") },
                     { toast("Update-Error | error = $it") },
                 )
         }
@@ -117,6 +130,23 @@ class RoomSampleActivity : BaseActivity<ActivityRoomSampleBinding>() {
         lastMessageText = "Hello! Can you pay for the food please!",
         lastMessageStatus = MessageStatus.UNDEFINED
     )
+
+    private fun getMocks() = List(10) {
+        ChatEntity(
+            id = it.toString(),
+            participant = emptyList(),
+            name = "Максим Халін #$it",
+            numUnreadMessage = 2,
+            status = ChatStatus.ACTIVE,
+            draftMessage = null,
+            iconLink = null,
+            iconColor = null,
+            onDesktop = false,
+            lastDate = Date().time,
+            lastMessageText = "Hello! Can you pay for the food please!",
+            lastMessageStatus = MessageStatus.UNDEFINED
+        )
+    }
 
     companion object : SimpleIntentProvider(RoomSampleActivity::class.java)
 }

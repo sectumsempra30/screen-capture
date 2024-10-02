@@ -11,7 +11,7 @@ versions.rxJava = '3.1.5'
 versions.rxJavaAndroid = '3.0.0'
 
 //DI
-versions.dagger = '2.42'
+versions.dagger = '2.48'
 
 //Json
 versions.gson = '2.9.0'
